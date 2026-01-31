@@ -44,34 +44,51 @@ public class DrawManager2D : MonoBehaviour
 
     private MaterialPropertyBlock mpb;
 
+    private bool startDetection = false;
+
+    [SerializeField] private PlayerInputDetection playerInput;
+
     private void Awake()
     {
         input = new InputSystem_Actions();
         mpb = new MaterialPropertyBlock();
+                
     }
-
     private void OnEnable()
     {
         input.Enable();
+        playerInput.OnMaskCreated += InitDrawing;
     }
 
     private void OnDisable()
     {
         input.Disable();
+        playerInput.OnMaskCreated -= InitDrawing;
+
     }
 
-    private void Start()
+    //private void Start()
+    //{
+    //    InitDrawing();
+    //}
+
+    private void InitDrawing()
     {
-        if (cam == null) cam = Camera.main;
 
         InitializeTexture();
+        startDetection = true;
+        spriteRenderer.color = new Color(1f,1f,1f,1f);
 
         xMult = totalXPixels / (bottomRightCorner.localPosition.x - topLeftCorner.localPosition.x);
         yMult = totalYPixels / (bottomRightCorner.localPosition.y - topLeftCorner.localPosition.y);
     }
 
-    private void Update()
-    {
+
+    private void Update() { 
+
+         if(!startDetection) return;
+
+    
         if (Mouse.current == null || cam == null) return;
 
         bool isHoldingClick = input.UI.Click.IsPressed();
@@ -81,16 +98,20 @@ public class DrawManager2D : MonoBehaviour
         else
             pressedLastFrame = false;
     }
+    public void SetSpriteTexture(SpriteRenderer sprite)
+    {
+        spriteRenderer = sprite;
+    }
 
-    private void InitializeTexture()
+
+    public void InitializeTexture()
     {
         colorMap = new Color[totalXPixels * totalYPixels];
-
-        // width = totalXPixels, height = totalYPixels
         generatedTexture = new Texture2D(totalXPixels, totalYPixels, TextureFormat.RGBA32, false);
         generatedTexture.filterMode = FilterMode.Point;
 
-        ApplyTextureToSpriteRenderer(); // ✅ no cambia el sprite, solo su textura
+        ApplyTextureToSpriteRenderer();     // textura para ambos
+
         ResetColor();
     }
 
@@ -101,7 +122,14 @@ public class DrawManager2D : MonoBehaviour
         spriteRenderer.GetPropertyBlock(mpb);
         mpb.SetTexture("_MainTex", generatedTexture);
         spriteRenderer.SetPropertyBlock(mpb);
+
+
+
     }
+
+   
+
+
 
     private void CalculatePixel2D()
     {
@@ -248,4 +276,5 @@ public class DrawManager2D : MonoBehaviour
         //Debug.Log("Saved at " + path);
         //File.WriteAllBytes(path, bytes);
     }
+
 }

@@ -24,6 +24,8 @@ public class PlayerInputDetection : MonoBehaviour
     Vector3 lastPoint;
     List<PlayerCircles> spawnedCircles = new List<PlayerCircles>();
 
+    public Action OnMaskCreated;
+
     // Update is called once per frame
     void Update()
     {
@@ -85,6 +87,7 @@ public class PlayerInputDetection : MonoBehaviour
             score += shapeCircle.GetScore();
         }
         completeEvaluation?.Invoke();
+        OnMaskCreated?.Invoke();
         Debug.Log($"Player Circles score = {score}/{totalCircles} ({(score/ spawnedCircles.Count) * 100}%)");
     }
 

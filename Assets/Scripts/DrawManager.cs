@@ -45,7 +45,7 @@ public class DrawManager : MonoBehaviour
     float xMult;
     float yMult;
 
-
+    [SerializeField] private bool startDetection = false;
 
     private InputSystem_Actions input;
 
@@ -67,6 +67,8 @@ public class DrawManager : MonoBehaviour
 
     private void Update()
     {
+        if(!startDetection) return;
+
         // "Click" en Update: mantenido/pulsado
         // Si quieres SOLO el frame del click, usa WasPressedThisFrame()
         bool isHoldingClick = input.UI.Click.IsPressed();
