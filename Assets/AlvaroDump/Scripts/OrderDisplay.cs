@@ -1,5 +1,6 @@
 using System.Collections;
 using TMPro;
+using UnityEditor.PackageManager;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -7,11 +8,16 @@ public class OrderDisplay : MonoBehaviour
 {
     [SerializeField]
     Image silueta;
+
     [SerializeField]
     TextMeshProUGUI colorRequirementTMP;
+
     [SerializeField]
     TextMeshProUGUI randomRequirementTMP;
-    
+
+    [SerializeField]
+    public GameObject cliente;
+
     OrderGenerator orderGenerator;
     Order order;
     bool colorTyped;
@@ -63,6 +69,8 @@ public class OrderDisplay : MonoBehaviour
             yield return new WaitForSeconds(timeBetweenCharacters);
         }
         typingCoroutine = null;
+        cliente.GetComponent<Animator>().SetTrigger("disapear");
+        
     }
 
     

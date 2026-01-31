@@ -1,9 +1,8 @@
 using System.Collections.Generic;
+using System.Collections;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.Events;
-using System;
-using System.Collections;
 
 public class PlayerInputDetection : MonoBehaviour
 {
@@ -25,7 +24,8 @@ public class PlayerInputDetection : MonoBehaviour
     Vector3 lastPoint;
     List<PlayerCircles> spawnedCircles = new List<PlayerCircles>();
 
-    public Action OnMaskCreated;
+    public float ShapeScore { get; internal set; }
+    public System.Action OnMaskCreated;
 
     private Coroutine drawCroroutine;
     [SerializeField] private float delayTime = 3f;
@@ -111,16 +111,16 @@ public class PlayerInputDetection : MonoBehaviour
                 closestCircle.SetClosestCircle(spawnedCircles[i], distance, perfectDistance);
         }
 
-        float score = 0;
+        ShapeScore = 0;
         float totalCircles = ShapeDetectionCircles.list.Count;
         for (int i = 0; i < ShapeDetectionCircles.list.Count; i++)
         {
             var shapeCircle = ShapeDetectionCircles.list[i];
-            score += shapeCircle.GetScore();
+            ShapeScore += shapeCircle.GetScore();
         }
+        ShapeScore /= ShapeDetectionCircles.list.Count;
         completeEvaluation?.Invoke();
         OnMaskCreated?.Invoke();
-        Debug.Log($"Player Circles score = {score}/{totalCircles} ({(score/ spawnedCircles.Count) * 100}%)");
     }
 
     private void GeneratePoints()
@@ -153,5 +153,15 @@ public class PlayerInputDetection : MonoBehaviour
         {
             spawnedCircles[i].gameObject.SetActive(false);
         }
+    }
+
+    internal void Reset()
+    {
+        for (int i = 0; i < spawnedCircles.Count; i++)
+            Destroy(spawnedCircles[i].gameObject);
+        spawnedCircles.Clear();
+
+        pathStarted = false;
+        pathCompleted = false;
     }
 }
