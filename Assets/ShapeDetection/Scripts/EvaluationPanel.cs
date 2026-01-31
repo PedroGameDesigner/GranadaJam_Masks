@@ -22,7 +22,13 @@ public class EvaluationPanel : MonoBehaviour
     [SerializeField] float fillTime;
     [SerializeField] float betweenChecksTime;
 
+    [Header("TestColor")]
+    [SerializeField] ColorConfig expectedColor;
+    [SerializeField, Range(0, 1)] float requiredColor = 0.25f;
+
+
     [Header("References")]
+    [SerializeField] TextureManager textureManager;
     [SerializeField] ShapePhaseController shapePhaseController;
 
     float rawScore;
@@ -39,7 +45,7 @@ public class EvaluationPanel : MonoBehaviour
         hasFit = convertedScore > scoreToFit;
         if (hasFit)
             convertedScore -= checkReduction;
-        hasColor = convertedScore > checkReduction;
+        hasColor = textureManager.CheckColor(0, expectedColor) > requiredColor;
         if (hasColor)
             convertedScore -= checkReduction;
 
@@ -48,6 +54,8 @@ public class EvaluationPanel : MonoBehaviour
 
     public IEnumerator EvaluationAnimation()
     {
+        UpdateFillBar(0);
+
         //Fade In
         float time = 0;
         while (time < fadeInTime)
