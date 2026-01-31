@@ -47,13 +47,22 @@ public class DrawManager2D : MonoBehaviour
     private bool startDetection = false;
 
     [SerializeField] private PlayerInputDetection playerInput;
+    [SerializeField] private GameObject canvasControlls;
 
     private void Awake()
     {
         input = new InputSystem_Actions();
         mpb = new MaterialPropertyBlock();
+        SetCanvasVisible(false);
+
                 
     }
+    private void SetCanvasVisible(bool value)
+    {
+        canvasControlls.SetActive(value);
+
+    }
+
     private void OnEnable()
     {
         input.Enable();
@@ -74,7 +83,7 @@ public class DrawManager2D : MonoBehaviour
 
     private void InitDrawing()
     {
-
+        SetCanvasVisible(true);
         InitializeTexture();
         startDetection = true;
         spriteRenderer.color = new Color(1f,1f,1f,1f);
@@ -276,6 +285,12 @@ public class DrawManager2D : MonoBehaviour
         //                            "Texture_" + DateTime.Now.Ticks + ".png");
         //Debug.Log("Saved at " + path);
         //File.WriteAllBytes(path, bytes);
+    }
+
+    public void FinishDrawing()
+    {
+        SaveTexture();
+        SetCanvasVisible(false);
     }
 
 }
