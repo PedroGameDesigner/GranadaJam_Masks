@@ -5,5 +5,5 @@ using TMPro;
 public class EvaluationPanel : MonoBehaviour
 {
     [SerializeField] Image fillBar;
-    [SerializeField] TM fillBar;
+    [SerializeField] TextMeshProUGUI fillBarText;
 }
