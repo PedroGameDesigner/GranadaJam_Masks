@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using System.Collections;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.Events;
@@ -24,7 +25,7 @@ public class PlayerInputDetection : MonoBehaviour
     List<PlayerCircles> spawnedCircles = new List<PlayerCircles>();
 
     public float ShapeScore { get; internal set; }
-    public Action OnMaskCreated;
+    public System.Action OnMaskCreated;
 
     private Coroutine drawCroroutine;
     [SerializeField] private float delayTime = 3f;
