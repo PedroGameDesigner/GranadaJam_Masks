@@ -58,11 +58,7 @@ public class PlayerInputDetection : MonoBehaviour
             {
                 drawCroroutine = StartCoroutine(Delay(delayTime));
             }
-            else
-            {
-                StopCoroutine(drawCroroutine);
-                drawCroroutine = StartCoroutine(Delay(delayTime));
-            }
+
         }
 
         if (!mousePressed && pathStarted)
@@ -85,6 +81,10 @@ public class PlayerInputDetection : MonoBehaviour
             delayCompleted = false;
             pathCompleted = true;
             CheckPath();
+        }
+        else {
+            StopCoroutine(drawCroroutine);
+            drawCroroutine = null;
         }
     }
 
