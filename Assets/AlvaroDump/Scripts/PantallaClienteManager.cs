@@ -3,14 +3,17 @@ using UnityEngine;
 
 public class PantallaClienteManager : MonoBehaviour
 {
+    public static PantallaClienteManager Instance;
+
     [SerializeField]
     GameObject comanda;
+
     [SerializeField]
     List<GameObject> cliente;
 
-    private void Start()
+    private void Awake()
     {
-        LanzarComanda();
+        Instance = this;
     }
 
     public void LanzarComanda()
