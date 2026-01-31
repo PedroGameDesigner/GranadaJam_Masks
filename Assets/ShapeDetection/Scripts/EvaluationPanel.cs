@@ -2,6 +2,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
 using System.Collections;
+using System;
 
 public class EvaluationPanel : MonoBehaviour
 {
@@ -34,6 +35,8 @@ public class EvaluationPanel : MonoBehaviour
     float convertedScore;
     bool hasColor;
     bool hasFit;
+
+    public Action<float> OnEvaluationFinished;
 
     public void StartEvaluation()
     {
@@ -109,7 +112,9 @@ public class EvaluationPanel : MonoBehaviour
                 yield return null;
             }
             convertedScore = scoreEnd;
+            
         }
+        OnEvaluationFinished?.Invoke(convertedScore);
     }
 
     void UpdateFillBar(float score)
