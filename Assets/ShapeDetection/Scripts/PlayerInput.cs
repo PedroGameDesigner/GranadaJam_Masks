@@ -53,41 +53,14 @@ public class PlayerInputDetection : MonoBehaviour
                 GeneratePoints();
                 pathStarted = true;
             }
-
-            if (drawCroroutine == null)
-            {
-                drawCroroutine = StartCoroutine(Delay(delayTime));
-            }
-
         }
 
         if (!mousePressed && pathStarted)
         {
-            CheckPathAfterDelay();
-                
-        }
-    }
-
-    private IEnumerator Delay(float time)
-    {
-        yield return new WaitForSeconds(time);
-        delayCompleted = true;
-    }
-
-    private void CheckPathAfterDelay()
-    {
-        if (delayCompleted)
-        {
-            delayCompleted = false;
             pathCompleted = true;
             CheckPath();
         }
-        else {
-            StopCoroutine(drawCroroutine);
-            drawCroroutine = null;
-        }
     }
-
 
     public void CheckPath()
     {
