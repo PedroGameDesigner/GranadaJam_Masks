@@ -29,11 +29,12 @@ public class PlayerInputDetection : MonoBehaviour
 
     private Coroutine drawCroroutine;
     [SerializeField] private float delayTime = 3f;
+    bool delayCompleted = false;
 
     // Update is called once per frame
     void Update()
     {
-        if (pathCompleted) return;
+        if (pathCompleted) return;        
 
         var mousePressed = Mouse.current.leftButton.IsPressed();
         if (mousePressed)
@@ -52,32 +53,39 @@ public class PlayerInputDetection : MonoBehaviour
                 GeneratePoints();
                 pathStarted = true;
             }
+
+            if (drawCroroutine == null)
+            {
+                drawCroroutine = StartCoroutine(Delay(delayTime));
+            }
+
         }
 
         if (!mousePressed && pathStarted)
         {
-            if(drawCroroutine == null)
-            {
-                drawCroroutine = StartCoroutine(Delay(delayTime));
-            }
-            else
-            {
-                StopCoroutine(drawCroroutine);
-                drawCroroutine = StartCoroutine(Delay(delayTime));
-            }
+            CheckPathAfterDelay();
+                
         }
     }
 
     private IEnumerator Delay(float time)
     {
         yield return new WaitForSeconds(time);
-        CheckPathAfterDelay();
+        delayCompleted = true;
     }
 
     private void CheckPathAfterDelay()
     {
-        pathCompleted = true;
-        CheckPath();
+        if (delayCompleted)
+        {
+            delayCompleted = false;
+            pathCompleted = true;
+            CheckPath();
+        }
+        else {
+            StopCoroutine(drawCroroutine);
+            drawCroroutine = null;
+        }
     }
 
 
