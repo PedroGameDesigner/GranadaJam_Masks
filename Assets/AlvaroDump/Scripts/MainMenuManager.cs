@@ -20,6 +20,10 @@ public class MainMenuManager : MonoBehaviour
     {
         //AnimacionMainMenu
         animatorMainMenu.SetTrigger("play");
-        activateFirstStep.Invoke();
+    }
+
+    public void DescripcionInicial()
+    {
+
     }
 }
