@@ -7,6 +7,6 @@ public class SetColorHelper : MonoBehaviour
     {
         var color = GetComponent<Image>().color;
 
-        FindFirstObjectByType<DrawManager>().SetColor(color);
+        FindFirstObjectByType<DrawManager2D>().SetColor(color);
     }
 }

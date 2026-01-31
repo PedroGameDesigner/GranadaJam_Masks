@@ -1,4 +1,5 @@
 using System;
+using System.IO;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -100,6 +101,31 @@ public class DrawManager : MonoBehaviour
         ResetColor(); //Resetting the color of the canvas to white
     }
 
+    Texture2D RotateTexture(Texture2D originalTexture, bool clockwise)
+    {
+        Color32[] original = originalTexture.GetPixels32();
+        Color32[] rotated = new Color32[original.Length];
+        int w = originalTexture.width;
+        int h = originalTexture.height;
+
+        int iRotated, iOriginal;
+
+        for (int j = 0; j < h; ++j)
+        {
+            for (int i = 0; i < w; ++i)
+            {
+                iRotated = (i + 1) * h - j - 1;
+                iOriginal = clockwise ? original.Length - 1 - (j * w + i) : j * w + i;
+                rotated[iRotated] = original[iOriginal];
+            }
+        }
+
+        Texture2D rotatedTexture = new Texture2D(h, w);
+        rotatedTexture.SetPixels32(rotated);
+        rotatedTexture.Apply();
+        return rotatedTexture;
+    }
+
     void CalculatePixel()//This function checks if the cursor is currently over the canvas and, if it is, it calculates which pixel on the canvas it is on
     {
         // Si estás en PC siempre, ok. Si puede no haber mouse, añade null-check.
@@ -157,6 +183,7 @@ public class DrawManager : MonoBehaviour
 
     void SetTexture() //This function applies the texture
     {
+        //generatedTexture = RotateTexture(generatedTexture, true);
         generatedTexture.SetPixels(colorMap);
         generatedTexture.Apply();
     }
@@ -182,6 +209,20 @@ public class DrawManager : MonoBehaviour
     {
         pressedLastFrame = false;
         ResetColor(); // ya pone todo blanco y aplica
+    }
+
+    public void SaveTexture()
+    {
+        var newTexture = RotateTexture(generatedTexture, true);
+        FindFirstObjectByType<TextureManager>().SaveTexture(newTexture);
+
+
+        //var newTexture = RotateTexture(generatedTexture, true);
+        //byte[] bytes = newTexture.EncodeToPNG();
+        //string path = Path.Combine(Application.persistentDataPath,
+        //                            "Texture_" + DateTime.Now.Ticks + ".png");
+        //Debug.Log("Saved at " + path);
+        //File.WriteAllBytes(path, bytes);
     }
 
 
