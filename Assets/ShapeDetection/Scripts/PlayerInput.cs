@@ -2,7 +2,6 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.Events;
-using System;
 
 public class PlayerInputDetection : MonoBehaviour
 {
@@ -120,5 +119,15 @@ public class PlayerInputDetection : MonoBehaviour
         {
             spawnedCircles[i].gameObject.SetActive(false);
         }
+    }
+
+    internal void Reset()
+    {
+        for (int i = 0; i < spawnedCircles.Count; i++)
+            Destroy(spawnedCircles[i].gameObject);
+        spawnedCircles.Clear();
+
+        pathStarted = false;
+        pathCompleted = false;
     }
 }
