@@ -3,6 +3,7 @@ using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.Events;
 using System;
+using System.Collections;
 
 public class PlayerInputDetection : MonoBehaviour
 {
@@ -23,6 +24,11 @@ public class PlayerInputDetection : MonoBehaviour
     bool pathCompleted;
     Vector3 lastPoint;
     List<PlayerCircles> spawnedCircles = new List<PlayerCircles>();
+
+    public Action OnMaskCreated;
+
+    private Coroutine drawCroroutine;
+    [SerializeField] private float delayTime = 3f;
 
     // Update is called once per frame
     void Update()
@@ -50,10 +56,30 @@ public class PlayerInputDetection : MonoBehaviour
 
         if (!mousePressed && pathStarted)
         {
-            pathCompleted = true;
-            CheckPath();
+            if(drawCroroutine == null)
+            {
+                drawCroroutine = StartCoroutine(Delay(delayTime));
+            }
+            else
+            {
+                StopCoroutine(drawCroroutine);
+                drawCroroutine = StartCoroutine(Delay(delayTime));
+            }
         }
     }
+
+    private IEnumerator Delay(float time)
+    {
+        yield return new WaitForSeconds(time);
+        CheckPathAfterDelay();
+    }
+
+    private void CheckPathAfterDelay()
+    {
+        pathCompleted = true;
+        CheckPath();
+    }
+
 
     public void CheckPath()
     {
@@ -85,6 +111,7 @@ public class PlayerInputDetection : MonoBehaviour
             score += shapeCircle.GetScore();
         }
         completeEvaluation?.Invoke();
+        OnMaskCreated?.Invoke();
         Debug.Log($"Player Circles score = {score}/{totalCircles} ({(score/ spawnedCircles.Count) * 100}%)");
     }
 
