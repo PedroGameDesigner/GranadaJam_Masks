@@ -1,7 +1,8 @@
-using System;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.Events;
+using System;
 
 public class PlayerInputDetection : MonoBehaviour
 {
@@ -11,6 +12,7 @@ public class PlayerInputDetection : MonoBehaviour
     [Header("Evaluation")]
     [SerializeField] float maxAssignDistance;
     [SerializeField] float perfectDistance;
+    [SerializeField] UnityEvent completeEvaluation;
 
 
     [Header("Debug values")]
@@ -82,6 +84,7 @@ public class PlayerInputDetection : MonoBehaviour
             var shapeCircle = ShapeDetectionCircles.list[i];
             score += shapeCircle.GetScore();
         }
+        completeEvaluation?.Invoke();
         Debug.Log($"Player Circles score = {score}/{totalCircles} ({(score/ spawnedCircles.Count) * 100}%)");
     }
 
@@ -90,5 +93,30 @@ public class PlayerInputDetection : MonoBehaviour
         var circle = Instantiate(circles, worldPoint, Quaternion.identity, transform);
         spawnedCircles.Add(circle);
         lastPoint = worldPoint;
+    }
+
+    public List<Vector2> GetPointList()
+    {
+        List<Vector2> points = new List<Vector2>();
+        Vector3 previousPoint = Vector2.one * Mathf.Infinity;
+        for (int i = 0; i < spawnedCircles.Count; i++)
+        {
+            if ((spawnedCircles[i].transform.position - previousPoint).magnitude > maxAssignDistance)
+            {
+                previousPoint = spawnedCircles[i].transform.position;
+                points.Add(spawnedCircles[i].transform.position);
+            }
+            else
+                Debug.Log($"{i}: {(spawnedCircles[i].transform.position - previousPoint).magnitude}");
+        }
+        return points;
+    }
+
+    internal void HidePoints()
+    {
+        for (int i = 0; i < spawnedCircles.Count; i++)
+        {
+            spawnedCircles[i].gameObject.SetActive(false);
+        }
     }
 }
