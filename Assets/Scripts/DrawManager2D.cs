@@ -137,8 +137,9 @@ public class DrawManager2D : MonoBehaviour
         Vector3 world = cam.ScreenToWorldPoint(new Vector3(mousePos.x, mousePos.y, -cam.transform.position.z));
 
         RaycastHit2D hit = Physics2D.Raycast(world, Vector2.zero);
-        if (hit.collider != null)
+        if (hit.collider != null )
         {
+            
             point.position = hit.point;
 
             xPixel = (int)((point.localPosition.x - topLeftCorner.localPosition.x) * xMult);
