@@ -1152,6 +1152,17 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1922344710}
   m_CullTransparentMesh: 1
+--- !u!114 &1962568711 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5706402161804974860, guid: bf3eaff6a391d2643ae483c25389bd2c, type: 3}
+  m_PrefabInstance: {fileID: 8334186304058188556}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0cb60c5db6726754786b3ceaaabc45e6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ShapePhaseController
 --- !u!1 &2008198837
 GameObject:
   m_ObjectHideFlags: 0
@@ -1301,13 +1312,14 @@ GameObject:
   - component: {fileID: 2082042434}
   - component: {fileID: 2082042433}
   - component: {fileID: 2082042432}
+  - component: {fileID: 2082042435}
   m_Layer: 5
   m_Name: EvaluationPanel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &2082042431
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1343,8 +1355,48 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2c7846ab2bf29d048810e29260e9e4bc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::EvaluationPanel
-  fillBar: {fileID: 0}
-  fillBarText: {fileID: 0}
+  canvasGroup: {fileID: 2082042435}
+  fillBar: {fileID: 794915434}
+  fillBarText: {fileID: 1079037138}
+  fillBarGradient:
+    serializedVersion: 2
+    key0: {r: 0.8627452, g: 0.07843138, b: 0.2352941, a: 1}
+    key1: {r: 1, g: 0.8431373, b: 0, a: 1}
+    key2: {r: 1, g: 0.8431373, b: 0, a: 0}
+    key3: {r: 0, g: 1, b: 0.4980392, a: 0}
+    key4: {r: 0, g: 0, b: 0, a: 0}
+    key5: {r: 0, g: 0, b: 0, a: 0}
+    key6: {r: 0, g: 0, b: 0, a: 0}
+    key7: {r: 0, g: 0, b: 0, a: 0}
+    ctime0: 13107
+    ctime1: 26214
+    ctime2: 39321
+    ctime3: 58982
+    ctime4: 0
+    ctime5: 0
+    ctime6: 0
+    ctime7: 0
+    atime0: 0
+    atime1: 65535
+    atime2: 0
+    atime3: 0
+    atime4: 0
+    atime5: 0
+    atime6: 0
+    atime7: 0
+    m_Mode: 0
+    m_ColorSpace: -1
+    m_NumColorKeys: 4
+    m_NumAlphaKeys: 2
+  colorCheck: {fileID: 1013722866}
+  conditionCheck: {fileID: 1922344712}
+  maxScore: 0.85
+  scoreToFit: 0.55
+  checkReduction: 0.1
+  fadeInTime: 0.5
+  fillTime: 3
+  betweenChecksTime: 0.75
+  shapePhaseController: {fileID: 1962568711}
 --- !u!114 &2082042433
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1383,6 +1435,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2082042430}
   m_CullTransparentMesh: 1
+--- !u!225 &2082042435
+CanvasGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2082042430}
+  m_Enabled: 1
+  m_Alpha: 0
+  m_Interactable: 0
+  m_BlocksRaycasts: 0
+  m_IgnoreParentGroups: 0
 --- !u!1001 &8334186304058188556
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1391,6 +1455,34 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 5706402161804974860, guid: bf3eaff6a391d2643ae483c25389bd2c, type: 3}
+      propertyPath: phaseCompletedEvent.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5706402161804974860, guid: bf3eaff6a391d2643ae483c25389bd2c, type: 3}
+      propertyPath: phaseCompletedEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5706402161804974860, guid: bf3eaff6a391d2643ae483c25389bd2c, type: 3}
+      propertyPath: phaseCompletedEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 2082042432}
+    - target: {fileID: 5706402161804974860, guid: bf3eaff6a391d2643ae483c25389bd2c, type: 3}
+      propertyPath: phaseCompletedEvent.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5706402161804974860, guid: bf3eaff6a391d2643ae483c25389bd2c, type: 3}
+      propertyPath: phaseCompletedEvent.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: StartEvaluation
+      objectReference: {fileID: 0}
+    - target: {fileID: 5706402161804974860, guid: bf3eaff6a391d2643ae483c25389bd2c, type: 3}
+      propertyPath: phaseCompletedEvent.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: EvaluationPanel, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 5706402161804974860, guid: bf3eaff6a391d2643ae483c25389bd2c, type: 3}
+      propertyPath: phaseCompletedEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     - target: {fileID: 6560017142002234412, guid: bf3eaff6a391d2643ae483c25389bd2c, type: 3}
       propertyPath: m_Creator
       value: 

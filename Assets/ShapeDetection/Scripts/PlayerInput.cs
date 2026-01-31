@@ -24,6 +24,8 @@ public class PlayerInputDetection : MonoBehaviour
     Vector3 lastPoint;
     List<PlayerCircles> spawnedCircles = new List<PlayerCircles>();
 
+    public float ShapeScore { get; internal set; }
+
     // Update is called once per frame
     void Update()
     {
@@ -77,15 +79,15 @@ public class PlayerInputDetection : MonoBehaviour
                 closestCircle.SetClosestCircle(spawnedCircles[i], distance, perfectDistance);
         }
 
-        float score = 0;
+        ShapeScore = 0;
         float totalCircles = ShapeDetectionCircles.list.Count;
         for (int i = 0; i < ShapeDetectionCircles.list.Count; i++)
         {
             var shapeCircle = ShapeDetectionCircles.list[i];
-            score += shapeCircle.GetScore();
+            ShapeScore += shapeCircle.GetScore();
         }
+        ShapeScore /= ShapeDetectionCircles.list.Count;
         completeEvaluation?.Invoke();
-        Debug.Log($"Player Circles score = {score}/{totalCircles} ({(score/ spawnedCircles.Count) * 100}%)");
     }
 
     private void GeneratePoints()
