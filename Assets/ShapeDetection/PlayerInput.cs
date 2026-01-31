@@ -7,7 +7,13 @@ public class PlayerInputDetection : MonoBehaviour
 {
     [SerializeField] PlayerCircles circles;
     [SerializeField] float placementDistance;
-    [Space]
+
+    [Header("Evaluation")]
+    [SerializeField] float maxAssignDistance;
+    [SerializeField] float perfectDistance;
+
+
+    [Header("Debug values")]
     [SerializeField] Vector2 screenCoords;
     [SerializeField] Vector3 worldPoint;
 
@@ -47,26 +53,36 @@ public class PlayerInputDetection : MonoBehaviour
         }
     }
 
-    private void CheckPath()
+    public void CheckPath()
     {
         for (int i = 0; i < spawnedCircles.Count; i++)
         {
             ShapeDetectionCircles closestCircle = null;
-            float distance = Mathf.Infinity;
+            float distance = maxAssignDistance;
             for (int j = 0; j < ShapeDetectionCircles.list.Count; j++)
             {
                 var shapeCircle = ShapeDetectionCircles.list[j];
                 var shapeDistance = (shapeCircle.transform.position - spawnedCircles[i].transform.position).magnitude;
-                if (closestCircle == null || shapeDistance < distance)
+                if (shapeDistance < distance)
                 {
                     closestCircle = shapeCircle;
                     distance = shapeDistance;
                 }
             }
 
-            spawnedCircles[i].SetClosestCircle(closestCircle, distance);
-            closestCircle.SetClosestCircle(spawnedCircles[i], distance);
+            spawnedCircles[i].SetClosestCircle(closestCircle, distance, perfectDistance);
+            if (closestCircle != null)
+                closestCircle.SetClosestCircle(spawnedCircles[i], distance, perfectDistance);
         }
+
+        float score = 0;
+        float totalCircles = ShapeDetectionCircles.list.Count;
+        for (int i = 0; i < ShapeDetectionCircles.list.Count; i++)
+        {
+            var shapeCircle = ShapeDetectionCircles.list[i];
+            score += shapeCircle.GetScore();
+        }
+        Debug.Log($"Player Circles score = {score}/{totalCircles} ({(score/ spawnedCircles.Count) * 100}%)");
     }
 
     private void GeneratePoints()
