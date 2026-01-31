@@ -1,16 +1,20 @@
+using TMPro;
 using UnityEngine;
 
 public class MoneyManager : MonoBehaviour
 {
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
+    [SerializeField] private TextMeshProUGUI moneyText;
+    [SerializeField] private float[] moneyAmount;
+
+    private void OnEnable()
     {
         
     }
 
-    // Update is called once per frame
-    void Update()
+    private void OnDisable()
     {
         
     }
+
+    
 }
