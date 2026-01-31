@@ -689,13 +689,14 @@ GameObject:
   - component: {fileID: 5471886190908564554}
   - component: {fileID: 6014764687139201099}
   - component: {fileID: 4872518526890663877}
+  - component: {fileID: 8887114347612059380}
   m_Layer: 5
   m_Name: MainMenu
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &8858489336338062130
 RectTransform:
   m_ObjectHideFlags: 0
@@ -779,6 +780,19 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &8887114347612059380
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8006269731232985514}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 148088022c2de6142b0e7dd366cc706a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::LaunchSound
+  paperSound: {fileID: 8300000, guid: 7d30b012528679d439ce009420816bfe, type: 3}
 --- !u!1 &9161746798778751866
 GameObject:
   m_ObjectHideFlags: 0

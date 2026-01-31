@@ -3,18 +3,22 @@ using UnityEngine;
 
 public class PantallaClienteManager : MonoBehaviour
 {
+    public static PantallaClienteManager Instance;
+
     [SerializeField]
     GameObject comanda;
+
     [SerializeField]
     List<GameObject> cliente;
 
-    private void Start()
+    private void Awake()
     {
-        LanzarComanda();
+        Instance = this;
     }
 
     public void LanzarComanda()
     {
+        Debug.Log("ComandaLanzada");
         GameObject comandatemp = Instantiate(comanda, transform);
         GameObject clientetemp = Instantiate(cliente[Random.Range(0, cliente.Count)], transform);
         comandatemp.GetComponent<OrderDisplay>().cliente = clientetemp;
