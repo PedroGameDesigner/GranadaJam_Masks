@@ -1,10 +1,9 @@
 using System.Collections.Generic;
-using Unity.VisualScripting;
 using UnityEngine;
-using System.Linq;
 
 public class TextureManager : MonoBehaviour
 {
+    [SerializeField] private Color nullColor = Color.white;
     [SerializeField] private List<Texture2D> tempTextures;
 
     private void Start()
@@ -14,5 +13,32 @@ public class TextureManager : MonoBehaviour
     public void SaveTexture(Texture2D texture)
     {
         tempTextures.Add(texture);
+    }
+
+    public float CheckColor(int textureId, Color color)
+    {
+        var texture = tempTextures[textureId];
+        int totalSize = texture.width * texture.height;
+        float coloredCount = 0;
+        float correctCount = 0;
+
+        for (int i = 0; i < texture.width; i++)
+            for (int j = 0; j < texture.height; j++)
+            {
+                var pixel = texture.GetPixel(i, j);
+                if (pixel != nullColor)
+                    coloredCount++;
+                if (pixel == color)
+                    correctCount++;
+            }
+
+
+        Debug.Log($"{correctCount}/{coloredCount} ({correctCount * 100 / coloredCount}%, full={totalSize})");
+
+        if (coloredCount/ totalSize > 0.1f)
+        {
+            return correctCount / coloredCount;
+        }
+        return 0;
     }
 }
