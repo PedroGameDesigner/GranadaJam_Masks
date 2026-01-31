@@ -23,7 +23,7 @@ public class EvaluationPanel : MonoBehaviour
     [SerializeField] float betweenChecksTime;
 
     [Header("TestColor")]
-    [SerializeField] Color expectedColor;
+    [SerializeField] ColorConfig expectedColor;
     [SerializeField, Range(0, 1)] float requiredColor = 0.25f;
 
 

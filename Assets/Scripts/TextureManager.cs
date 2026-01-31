@@ -3,7 +3,7 @@ using UnityEngine;
 
 public class TextureManager : MonoBehaviour
 {
-    [SerializeField] private Color nullColor = Color.white;
+    [SerializeField] private ColorConfig nullColor;
     [SerializeField] private List<Texture2D> tempTextures;
 
     private void Start()
@@ -15,7 +15,7 @@ public class TextureManager : MonoBehaviour
         tempTextures.Add(texture);
     }
 
-    public float CheckColor(int textureId, Color color)
+    public float CheckColor(int textureId, ColorConfig color)
     {
         var texture = tempTextures[textureId];
         int totalSize = texture.width * texture.height;
@@ -26,9 +26,9 @@ public class TextureManager : MonoBehaviour
             for (int j = 0; j < texture.height; j++)
             {
                 var pixel = texture.GetPixel(i, j);
-                if (pixel != nullColor)
+                if (!nullColor.IsColor(pixel))
                     coloredCount++;
-                if (pixel == color)
+                if (color.IsColor(pixel))
                     correctCount++;
             }
 
