@@ -24,6 +24,10 @@ public class PlayerInputDetection : MonoBehaviour
     List<PlayerCircles> spawnedCircles = new List<PlayerCircles>();
 
     public float ShapeScore { get; internal set; }
+    public Action OnMaskCreated;
+
+    private Coroutine drawCroroutine;
+    [SerializeField] private float delayTime = 3f;
 
     // Update is called once per frame
     void Update()
@@ -51,10 +55,30 @@ public class PlayerInputDetection : MonoBehaviour
 
         if (!mousePressed && pathStarted)
         {
-            pathCompleted = true;
-            CheckPath();
+            if(drawCroroutine == null)
+            {
+                drawCroroutine = StartCoroutine(Delay(delayTime));
+            }
+            else
+            {
+                StopCoroutine(drawCroroutine);
+                drawCroroutine = StartCoroutine(Delay(delayTime));
+            }
         }
     }
+
+    private IEnumerator Delay(float time)
+    {
+        yield return new WaitForSeconds(time);
+        CheckPathAfterDelay();
+    }
+
+    private void CheckPathAfterDelay()
+    {
+        pathCompleted = true;
+        CheckPath();
+    }
+
 
     public void CheckPath()
     {
@@ -87,6 +111,7 @@ public class PlayerInputDetection : MonoBehaviour
         }
         ShapeScore /= ShapeDetectionCircles.list.Count;
         completeEvaluation?.Invoke();
+        OnMaskCreated?.Invoke();
     }
 
     private void GeneratePoints()
