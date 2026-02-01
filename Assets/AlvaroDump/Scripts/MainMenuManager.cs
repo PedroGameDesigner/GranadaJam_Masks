@@ -5,6 +5,7 @@ public class MainMenuManager : MonoBehaviour
 {
     
     public static MainMenuManager Instance;
+    public GameObject nosotros;
     public AudioClip clickSound;
 
     [SerializeField] 
@@ -22,6 +23,7 @@ public class MainMenuManager : MonoBehaviour
         animatorMainMenu.SetTrigger("play");
         TutorialBehavior.Instance.AparicionTutorial();
         FXManager.Instance.PlaySound(clickSound);
+        nosotros.SetActive(false);
     }
 
 }
