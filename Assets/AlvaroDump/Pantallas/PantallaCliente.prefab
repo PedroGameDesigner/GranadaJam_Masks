@@ -116,6 +116,9 @@ MonoBehaviour:
   comanda: {fileID: 5642401957082043192, guid: 6554485687a65bd4cb00e69317afd4a0, type: 3}
   clients:
   - {fileID: 11400000, guid: 70d22a676c9b3db4ab9b362ba6cb45f3, type: 2}
+  - {fileID: 11400000, guid: 16fc0ef0ca6606b4cad748051925739c, type: 2}
+  - {fileID: 11400000, guid: 201510042da9d484491cba43d140e52b, type: 2}
+  - {fileID: 11400000, guid: 6ce8f9eba07cd1a428f187a9092b4a7b, type: 2}
   tutorialObject: {fileID: 0}
 --- !u!1001 &6865545107653520977
 PrefabInstance:
