@@ -20,7 +20,10 @@ public class TextureManager : MonoBehaviour
     }
     public void SaveTexture(int id, Texture2D texture)
     {
+        if(!tempTextures.ContainsKey(id)) 
         tempTextures.Add(id, texture);
+        else
+            tempTextures[id] = texture;
     }
     public Texture2D LoadTexture(int id)
     {
