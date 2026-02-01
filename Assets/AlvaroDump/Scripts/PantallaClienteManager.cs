@@ -20,7 +20,7 @@ public class PantallaClienteManager : MonoBehaviour
     {
         
         GameObject comandatemp = Instantiate(comanda, transform);
-        GameObject clientetemp = Instantiate(cliente[Random.Range(0, cliente.Count)], transform);
+        GameObject clientetemp = Instantiate(cliente[Random.Range(0, cliente.Count)]);
         comandatemp.GetComponent<OrderDisplay>().cliente = clientetemp;
     }
 
