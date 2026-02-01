@@ -3887,7 +3887,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1856599783175443635, guid: ac6585cb2f9532749af422377d9b07af, type: 3}
       propertyPath: m_SizeDelta.y
-      value: 1080
+      value: 1223.26
       objectReference: {fileID: 0}
     - target: {fileID: 1856599783175443635, guid: ac6585cb2f9532749af422377d9b07af, type: 3}
       propertyPath: m_LocalScale.x
@@ -3916,6 +3916,14 @@ PrefabInstance:
     - target: {fileID: 1856599783175443635, guid: ac6585cb2f9532749af422377d9b07af, type: 3}
       propertyPath: m_LocalRotation.z
       value: 0.02655205
+      objectReference: {fileID: 0}
+    - target: {fileID: 1856599783175443635, guid: ac6585cb2f9532749af422377d9b07af, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1856599783175443635, guid: ac6585cb2f9532749af422377d9b07af, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -18
       objectReference: {fileID: 0}
     - target: {fileID: 1856599783175443635, guid: ac6585cb2f9532749af422377d9b07af, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
@@ -3963,11 +3971,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6004212559566330526, guid: ac6585cb2f9532749af422377d9b07af, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 1.4
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 6004212559566330526, guid: ac6585cb2f9532749af422377d9b07af, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -130.6
+      value: -14
       objectReference: {fileID: 0}
     - target: {fileID: 6004212559566330526, guid: ac6585cb2f9532749af422377d9b07af, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
@@ -3979,7 +3987,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6274723476388785854, guid: ac6585cb2f9532749af422377d9b07af, type: 3}
       propertyPath: m_SizeDelta.x
-      value: 504.4
+      value: 882.2
       objectReference: {fileID: 0}
     - target: {fileID: 6274723476388785854, guid: ac6585cb2f9532749af422377d9b07af, type: 3}
       propertyPath: m_SizeDelta.y
@@ -4007,11 +4015,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6274723476388785854, guid: ac6585cb2f9532749af422377d9b07af, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: -324
+      value: 94
       objectReference: {fileID: 0}
     - target: {fileID: 6274723476388785854, guid: ac6585cb2f9532749af422377d9b07af, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 330
+      value: 458
       objectReference: {fileID: 0}
     - target: {fileID: 6274723476388785854, guid: ac6585cb2f9532749af422377d9b07af, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
@@ -4035,7 +4043,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7066005684321991834, guid: ac6585cb2f9532749af422377d9b07af, type: 3}
       propertyPath: m_text
-      value: Guia para principiantes
+      value: 'Para mi nuevo artesano:'
       objectReference: {fileID: 0}
     - target: {fileID: 7066005684321991834, guid: ac6585cb2f9532749af422377d9b07af, type: 3}
       propertyPath: m_fontSize
@@ -4060,6 +4068,14 @@ PrefabInstance:
     - target: {fileID: 7066005684321991834, guid: ac6585cb2f9532749af422377d9b07af, type: 3}
       propertyPath: m_hasFontAssetChanged
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7640410848262955482, guid: ac6585cb2f9532749af422377d9b07af, type: 3}
+      propertyPath: m_text
+      value: "\xA1Ay, ni\xF1o! Perdona por dejarte solico en el taller tu primer
+        d\xEDa, que tengo que ir a por medecinas. Tendras que apa\xF1arte y atender
+        a nuestros clientes habituales: la tristona, el purpillo, el musculitos,
+        el pelushe...  Hazles bien las m\xE1scaras, eh. Y no te vayas a cortar un
+        dedo, ni a intoxicarte con las pinturas. \xA1Anda con dios, buena suerte!"
       objectReference: {fileID: 0}
     - target: {fileID: 7640410848262955482, guid: ac6585cb2f9532749af422377d9b07af, type: 3}
       propertyPath: m_fontSize
