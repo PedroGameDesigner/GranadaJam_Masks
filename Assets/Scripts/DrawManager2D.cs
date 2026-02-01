@@ -273,8 +273,8 @@ public class DrawManager2D : MonoBehaviour
 
     public void SaveTexture()
     {
-        var newTexture = RotateTexture(generatedTexture, true);
-        FindFirstObjectByType<TextureManager>().SaveTexture(storageID, newTexture);
+       // var newTexture = RotateTexture(generatedTexture, true);
+        FindFirstObjectByType<TextureManager>().SaveTexture(storageID, generatedTexture);
 
 
         //var newTexture = RotateTexture(generatedTexture, true);

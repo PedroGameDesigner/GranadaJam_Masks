@@ -15,6 +15,10 @@ public class MaskManager : MonoBehaviour
         Instance = this;
     }
 
+    public bool ExistMask(int id)
+    {
+        return maskDictionary.ContainsKey(id);
+    }
     public void SaveMask(int id, GameObject mask, Texture2D texture)
     {
         var copiedMask = Instantiate(mask);
