@@ -1,11 +1,14 @@
-using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 public class TutorialBehavior : MonoBehaviour
 {
+
     public static TutorialBehavior Instance;
     Animator animator;
-    bool tutorialTerminado = false;
+    bool tutorialTerminado = true;
+    
+    
 
     private void Awake()
     {
@@ -22,15 +25,23 @@ public class TutorialBehavior : MonoBehaviour
         animator.SetTrigger("appear");
     }
 
+    private void Update()
+    {
+        if(Mouse.current.leftButton.isPressed)
+        TerminarTutorial();
+    }
+
     public void TerminarTutorial()
     {
-        Debug.Log("ComandaLanzada");
         if (!tutorialTerminado) 
         {
-            Debug.Log("ComandaLanzada");
-            tutorialTerminado = false;
+            tutorialTerminado = true;
             PantallaClienteManager.Instance.LanzarComanda();
         }
     }
 
+    public void TutorialActivarClick()
+    {
+        tutorialTerminado = false;
+    }
 }
