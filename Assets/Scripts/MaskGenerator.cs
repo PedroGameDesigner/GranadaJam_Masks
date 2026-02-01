@@ -1,3 +1,4 @@
+using System.Collections;
 using UnityEngine;
 
 public class MaskGenerator : MonoBehaviour
@@ -5,7 +6,10 @@ public class MaskGenerator : MonoBehaviour
     [SerializeField] private EvaluationPanel evPanel;
     [SerializeField] private ShapePhaseController shapeController;
     [SerializeField] private PlayerInputDetection playerDetection;
-    [SerializeField] private DrawManager drawManager;
+    [SerializeField] private DrawManager2D drawManager2D;
+    [SerializeField] private GameObject Mask;
+
+    [SerializeField] private float delayBeforeNewMask;
     private void OnEnable()
     {
         evPanel.OnEvaluationFinished += (f) => GetNewMask();
@@ -13,16 +17,27 @@ public class MaskGenerator : MonoBehaviour
 
     private void OnDisable()
     {
-        evPanel.OnEvaluationFinished += (f) => GetNewMask();
+        evPanel.OnEvaluationFinished -= (f) => GetNewMask();
     }
 
     private void GetNewMask()
     {
-
-        shapeController.BeginShape();
-        playerDetection.Reset();
+        StartCoroutine(Delay(delayBeforeNewMask));
         
-
+    }
+    private IEnumerator Delay(float value)
+    {
+        yield return new WaitForSeconds(value);
+        NewMask();
     }
 
+    private void NewMask()
+    {
+        evPanel.HidePanel();
+        drawManager2D.ResetCanvas();
+        drawManager2D.HideSpriteRenderer();
+        shapeController.BeginShape();
+        playerDetection.Reset();
+        Mask.transform.position = transform.localPosition +  new Vector3(100,0,0);
+    }
 }

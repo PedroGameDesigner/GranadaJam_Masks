@@ -126,4 +126,9 @@ public class EvaluationPanel : MonoBehaviour
         fillBar.color = fillColor;
         fillBarText.text = $"{overTenScore}/10";
     }
+
+    public void HidePanel()
+    {
+        canvasGroup.alpha = 0f;
+    }
 }
