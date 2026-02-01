@@ -15,6 +15,7 @@ public class PantallaClienteManager : MonoBehaviour
     [SerializeField] private GameObject tutorialObject;
 
     public ClientScriptable CurrentClient { get; private set; }
+    public OrderDisplay CurrentComanda { get; private set; }
 
     private void Awake()
     {
@@ -26,12 +27,12 @@ public class PantallaClienteManager : MonoBehaviour
         CurrentClient = clients[Random.Range(0, clients.Count)];
 
         GameObject comandatemp = Instantiate(comanda, transform);
-        var orderDisplay = comandatemp.GetComponent<OrderDisplay>();
+        CurrentComanda = comandatemp.GetComponent<OrderDisplay>();
 
         GameObject clientetemp = Instantiate(CurrentClient.clientPrefab);
         clientetemp.GetComponent<WearMask>().PutOnMask(CurrentClient.clientId);
-        orderDisplay.cliente = clientetemp;
-        orderDisplay.clientScriptable = CurrentClient;
+        CurrentComanda.cliente = clientetemp;
+        CurrentComanda.clientScriptable = CurrentClient;
 
         if (!justFirstTime)
         {

@@ -13,4 +13,5 @@ MonoBehaviour:
   m_Name: Purple
   m_EditorClassIdentifier: Assembly-CSharp::ColorConfig
   colorHex: '#8d1378'
+  colorName: Purpura
   colorId: 5

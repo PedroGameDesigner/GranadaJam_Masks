@@ -13,4 +13,5 @@ MonoBehaviour:
   m_Name: Orange
   m_EditorClassIdentifier: Assembly-CSharp::ColorConfig
   colorHex: '#ee8a31'
+  colorName: Naranja
   colorId: 6

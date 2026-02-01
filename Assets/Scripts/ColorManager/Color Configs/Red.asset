@@ -13,4 +13,5 @@ MonoBehaviour:
   m_Name: Red
   m_EditorClassIdentifier: Assembly-CSharp::ColorConfig
   colorHex: '#d43007'
+  colorName: Roja
   colorId: 3

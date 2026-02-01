@@ -22,11 +22,6 @@ public class EvaluationPanel : MonoBehaviour
     [SerializeField] float fillTime;
     [SerializeField] float betweenChecksTime;
 
-    [Header("TestColor")]
-    [SerializeField] ColorConfig expectedColor;
-    [SerializeField, Range(0, 1)] float requiredColor = 0.25f;
-
-
     [Header("References")]
     [SerializeField] TextureManager textureManager;
     [SerializeField] ShapePhaseController shapePhaseController;
@@ -40,6 +35,7 @@ public class EvaluationPanel : MonoBehaviour
 
     public void StartEvaluation()
     {
+        var order = PantallaClienteManager.Instance.CurrentComanda.order;
         conditionCheck.gameObject.SetActive(false);
         colorCheck.gameObject.SetActive(false);
 
@@ -48,7 +44,7 @@ public class EvaluationPanel : MonoBehaviour
         hasFit = convertedScore > scoreToFit;
         if (hasFit)
             convertedScore -= checkReduction;
-        hasColor = textureManager.CheckColor(0, expectedColor) > requiredColor;
+        hasColor = textureManager.CheckColor(0, order.colorRequirement.maskColor) > order.colorRequirement.percentage;
         if (hasColor)
             convertedScore -= checkReduction;
 

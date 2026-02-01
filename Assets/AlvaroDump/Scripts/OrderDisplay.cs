@@ -19,7 +19,7 @@ public class OrderDisplay : MonoBehaviour
     public ClientScriptable clientScriptable;
 
     OrderGenerator orderGenerator;
-    Order order;
+    public Order order;
     bool colorTyped;
 
     [SerializeField]
