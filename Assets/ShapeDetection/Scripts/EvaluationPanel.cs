@@ -40,6 +40,7 @@ public class EvaluationPanel : MonoBehaviour
     public void StartEvaluation()
     {
         var order = PantallaClienteManager.Instance.CurrentComanda.order;
+        var client = PantallaClienteManager.Instance.CurrentClient.clientId;
         conditionCheck.gameObject.SetActive(false);
         colorCheck.gameObject.SetActive(false);
         conditionCheckError.gameObject.SetActive(false);
@@ -52,7 +53,7 @@ public class EvaluationPanel : MonoBehaviour
         hasFit = convertedScore > scoreToFit;
         if (hasFit)
             convertedScore -= checkReduction;
-        hasColor = textureManager.CheckColor(0, order.colorRequirement.maskColor) > order.colorRequirement.percentage;
+        hasColor = textureManager.CheckColor(client, order.colorRequirement.maskColor) > order.colorRequirement.percentage;
         if (hasColor)
             convertedScore -= checkReduction;
 

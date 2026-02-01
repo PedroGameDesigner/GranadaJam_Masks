@@ -86,6 +86,7 @@ public class DrawManager2D : MonoBehaviour
 
     private void InitDrawing(int storageID)
     {
+        this.storageID = storageID;
         SetCanvasVisible(true);
         InitializeTexture();
         Mask.transform.position = transform.localPosition= new Vector3(0f,0f,0f);
@@ -304,7 +305,7 @@ public class DrawManager2D : MonoBehaviour
     {
         SetDetection(false);
         SaveTexture();
-        MaskManager.Instance.SaveMask(storageID, spriteRenderer.transform.parent.gameObject, TextureManager.Instance.LoadTexture(0));
+        MaskManager.Instance.SaveMask(storageID, spriteRenderer.transform.parent.gameObject, TextureManager.Instance.LoadTexture(storageID));
         SetCanvasVisible(false);
         savedTexture = true;
     }

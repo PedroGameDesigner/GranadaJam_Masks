@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 4226749046069928131}
   - component: {fileID: 3303521699093091844}
   - component: {fileID: 5360663558899069066}
+  - component: {fileID: 5168166953709919692}
   m_Layer: 0
   m_Name: Payasa
   m_TagString: Untagged
@@ -130,6 +131,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::WearMask
   maskSize: {x: 0.3, y: 0.3}
   facePosition: {x: 0.01, y: 0.27, z: -0.1}
+--- !u!114 &5168166953709919692
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8747206333892492623}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 148088022c2de6142b0e7dd366cc706a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::LaunchSound
+  paperSound: {fileID: 8300000, guid: b1e2abf67d2772a46bc4de640bc777a4, type: 3}
+  hablarPersonaje: {fileID: 8300000, guid: 02b566efe8697be49b14b42951ff2e73, type: 3}
 --- !u!1 &9151962683498087561
 GameObject:
   m_ObjectHideFlags: 0
