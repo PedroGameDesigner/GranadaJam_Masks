@@ -2322,30 +2322,6 @@ PrefabInstance:
       propertyPath: delayTime
       value: 0.5
       objectReference: {fileID: 0}
-    - target: {fileID: 3212038475222476363, guid: bf3eaff6a391d2643ae483c25389bd2c, type: 3}
-      propertyPath: m_SortingOrder
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3212038475222476363, guid: bf3eaff6a391d2643ae483c25389bd2c, type: 3}
-      propertyPath: m_LocalAABB.m_Center.x
-      value: -0.011582851
-      objectReference: {fileID: 0}
-    - target: {fileID: 3212038475222476363, guid: bf3eaff6a391d2643ae483c25389bd2c, type: 3}
-      propertyPath: m_LocalAABB.m_Center.y
-      value: -0.66010725
-      objectReference: {fileID: 0}
-    - target: {fileID: 3212038475222476363, guid: bf3eaff6a391d2643ae483c25389bd2c, type: 3}
-      propertyPath: m_LocalAABB.m_Extent.x
-      value: 2.7182322
-      objectReference: {fileID: 0}
-    - target: {fileID: 3212038475222476363, guid: bf3eaff6a391d2643ae483c25389bd2c, type: 3}
-      propertyPath: m_LocalAABB.m_Extent.y
-      value: 1.804519
-      objectReference: {fileID: 0}
-    - target: {fileID: 4623496387517700650, guid: bf3eaff6a391d2643ae483c25389bd2c, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 5706402161804974860, guid: bf3eaff6a391d2643ae483c25389bd2c, type: 3}
       propertyPath: phaseCompletedEvent.m_PersistentCalls.m_Calls.Array.size
       value: 0
@@ -2357,10 +2333,6 @@ PrefabInstance:
     - target: {fileID: 7568940954698734855, guid: bf3eaff6a391d2643ae483c25389bd2c, type: 3}
       propertyPath: m_IsActive
       value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 8102954212175996072, guid: bf3eaff6a391d2643ae483c25389bd2c, type: 3}
-      propertyPath: m_SortingOrder
-      value: -10
       objectReference: {fileID: 0}
     - target: {fileID: 8536464980566722666, guid: bf3eaff6a391d2643ae483c25389bd2c, type: 3}
       propertyPath: m_LocalPosition.x
