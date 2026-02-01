@@ -24,11 +24,14 @@ public class PantallaClienteManager : MonoBehaviour
     public void LanzarComanda()
     {
         CurrentClient = clients[Random.Range(0, clients.Count)];
+
         GameObject comandatemp = Instantiate(comanda, transform);
         var orderDisplay = comandatemp.GetComponent<OrderDisplay>();
+
         GameObject clientetemp = Instantiate(CurrentClient.clientPrefab, transform);
         orderDisplay.cliente = clientetemp;
         orderDisplay.clientScriptable = CurrentClient;
+
         if (!justFirstTime)
         {
             justFirstTime = true;

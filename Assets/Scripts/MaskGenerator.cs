@@ -22,9 +22,6 @@ public class MaskGenerator : MonoBehaviour
 
     private void GetNewMask()
     {
-        var client = PantallaClienteManager.Instance.CurrentClient;
-        shapeController.BeginShape(client);
-        playerDetection.Reset();
         StartCoroutine(Delay(delayBeforeNewMask));
         
     }
