@@ -646,7 +646,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::TextureManager
   nullColor: {fileID: 11400000, guid: 96c3a63d92d2b2947933de735f9143ec, type: 2}
-  tempTextures: []
 --- !u!1 &387505371
 GameObject:
   m_ObjectHideFlags: 0
@@ -1060,6 +1059,7 @@ MonoBehaviour:
   evPanel: {fileID: 1917760451}
   shapeController: {fileID: 1115512455}
   playerDetection: {fileID: 1115512453}
+  drawManager: {fileID: 0}
   drawManager2D: {fileID: 2044964997}
   Mask: {fileID: 71784232}
   delayBeforeNewMask: 3
@@ -1271,7 +1271,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.18490559, g: 0.18106793, b: 0.18106793, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -3662,8 +3662,12 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1227941496918113641, guid: 3f3d3aa2650984a43a4d2d96eddd7f93, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2530286214976257455, guid: 3f3d3aa2650984a43a4d2d96eddd7f93, type: 3}
+      propertyPath: clientScriptable
+      value: 
+      objectReference: {fileID: 11400000, guid: 70d22a676c9b3db4ab9b362ba6cb45f3, type: 2}
     - target: {fileID: 3206299271657697430, guid: 3f3d3aa2650984a43a4d2d96eddd7f93, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -3726,7 +3730,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3206299271657697430, guid: 3f3d3aa2650984a43a4d2d96eddd7f93, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: -23.072876
+      value: -23.072998
       objectReference: {fileID: 0}
     - target: {fileID: 3206299271657697430, guid: 3f3d3aa2650984a43a4d2d96eddd7f93, type: 3}
       propertyPath: m_AnchoredPosition.y
@@ -4436,7 +4440,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::DrawManager2D
   cam: {fileID: 2008198840}
   spriteRenderer: {fileID: 1115512454}
-  clienID: 0
   totalXPixels: 1024
   totalYPixels: 1024
   brushSize: 4
@@ -4499,7 +4502,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0, g: 0, b: 0, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
