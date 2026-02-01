@@ -30,10 +30,13 @@ public class PlayerInputDetection : MonoBehaviour
     private Coroutine drawCroroutine;
     [SerializeField] private float delayTime = 3f;
     bool delayCompleted = false;
+    public bool enableInput =false;
 
     // Update is called once per frame
     void Update()
     {
+        if(!enableInput) return;
+
         if (pathCompleted) return;        
 
         var mousePressed = Mouse.current.leftButton.IsPressed();
