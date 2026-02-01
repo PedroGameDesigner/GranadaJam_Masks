@@ -40,6 +40,9 @@ public class EvaluationPanel : MonoBehaviour
 
     public void StartEvaluation()
     {
+        conditionCheck.gameObject.SetActive(false);
+        colorCheck.gameObject.SetActive(false);
+
         rawScore = shapePhaseController.ShapeScore;
         convertedScore = rawScore / maxScore;
         hasFit = convertedScore > scoreToFit;
@@ -125,5 +128,10 @@ public class EvaluationPanel : MonoBehaviour
         fillBar.fillAmount = score;
         fillBar.color = fillColor;
         fillBarText.text = $"{overTenScore}/10";
+    }
+
+    public void HidePanel()
+    {
+        canvasGroup.alpha = 0f;
     }
 }

@@ -49,7 +49,9 @@ public class DrawManager2D : MonoBehaviour
 
     [SerializeField] private PlayerInputDetection playerInput;
     [SerializeField] private GameObject canvasControlls;
+    [SerializeField] private GameObject Mask;
 
+    private bool savedTexture = false;
     private void Awake()
     {
         input = new InputSystem_Actions();
@@ -58,7 +60,7 @@ public class DrawManager2D : MonoBehaviour
 
                 
     }
-    private void SetCanvasVisible(bool value)
+    public void SetCanvasVisible(bool value)
     {
         canvasControlls.SetActive(value);
 
@@ -86,11 +88,18 @@ public class DrawManager2D : MonoBehaviour
     {
         SetCanvasVisible(true);
         InitializeTexture();
+        Mask.transform.position = transform.localPosition= new Vector3(0f,0f,0f);
+
         startDetection = true;
         spriteRenderer.color = new Color(1f,1f,1f,1f);
 
         xMult = totalXPixels / (bottomRightCorner.localPosition.x - topLeftCorner.localPosition.x);
         yMult = totalYPixels / (bottomRightCorner.localPosition.y - topLeftCorner.localPosition.y);
+    }
+
+    public void HideSpriteRenderer()
+    {
+        //spriteRenderer.color = new Color(0f,0f,0f,0f);
     }
 
 
@@ -116,7 +125,13 @@ public class DrawManager2D : MonoBehaviour
 
     public void InitializeTexture()
     {
+
+        if (savedTexture) return;
+
+
         colorMap = new Color[totalXPixels * totalYPixels];
+
+        
         generatedTexture = new Texture2D(totalXPixels, totalYPixels, TextureFormat.RGBA32, false);
         generatedTexture.filterMode = FilterMode.Point;
 
@@ -134,7 +149,7 @@ public class DrawManager2D : MonoBehaviour
         spriteRenderer.SetPropertyBlock(mpb);
     }
 
-   
+
 
 
 
@@ -287,9 +302,16 @@ public class DrawManager2D : MonoBehaviour
 
     public void FinishDrawing()
     {
+        SetDetection(false);
         SaveTexture();
         MaskManager.Instance.SaveMask(storageID, spriteRenderer.transform.parent.gameObject, TextureManager.Instance.LoadTexture(0));
         SetCanvasVisible(false);
+        savedTexture = true;
+    }
+
+    public void SetDetection(bool detection)
+    {
+        startDetection = detection;
     }
 
 }

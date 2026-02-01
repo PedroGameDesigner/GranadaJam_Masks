@@ -3775,6 +3775,7 @@ MonoBehaviour:
   generatedTexture: {fileID: 0}
   playerInput: {fileID: 1115512453}
   canvasControlls: {fileID: 103507324}
+  Mask: {fileID: 0}
 --- !u!1 &2124973507
 GameObject:
   m_ObjectHideFlags: 0

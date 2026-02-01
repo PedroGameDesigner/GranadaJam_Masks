@@ -10,6 +10,9 @@ public class PantallaClienteManager : MonoBehaviour
 
     [SerializeField]
     List<ClientScriptable> clients;
+    List<GameObject> cliente;
+    private bool justFirstTime = false;
+    [SerializeField] private GameObject tutorialObject;
 
     private void Awake()
     {
@@ -24,6 +27,11 @@ public class PantallaClienteManager : MonoBehaviour
         GameObject clientetemp = Instantiate(client.clientPrefab, transform);
         orderDisplay.cliente = clientetemp;
         orderDisplay.clientScriptable = client;
+        if (!justFirstTime)
+        {
+            justFirstTime = true;
+            tutorialObject.SetActive(false);
+        }
     }
 
 
