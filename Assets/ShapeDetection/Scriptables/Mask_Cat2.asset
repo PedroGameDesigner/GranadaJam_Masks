@@ -13,4 +13,4 @@ MonoBehaviour:
   m_Name: Mask_Cat2
   m_EditorClassIdentifier: Assembly-CSharp::MaskShapeScriptable
   shapeSplinePrefab: {fileID: 32848008625724235, guid: 673f0143986ecc248aaff3a3816f5885, type: 3}
-  icon: {fileID: 0}
+  icon: {fileID: -2095027267487644318, guid: 2fb7d9d663c1a754fbb648653044a2e6, type: 3}

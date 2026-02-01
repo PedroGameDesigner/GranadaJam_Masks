@@ -418,6 +418,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 2ead96b2cb064ca4d84087b9967bfa03, type: 2}
   - {fileID: 11400000, guid: e5b50d7cb691ba74e96c6c46dcfc93e1, type: 2}
   - {fileID: 11400000, guid: 8791ea6880a864d40b129c6c3000c782, type: 2}
+  - {fileID: 11400000, guid: de61ee6a2e8679b49920243bee7123ba, type: 2}
   colors:
   - {fileID: 11400000, guid: 4f99a85ae919bca4cadf95671e4e8d38, type: 2}
   - {fileID: 11400000, guid: 67eed28b7a980a54f94002ad374ba8c7, type: 2}
@@ -429,8 +430,16 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 4c5d11dfc5f78834eb1a9a1a1c23e800, type: 2}
   - {fileID: 11400000, guid: 9da1409c87a38904b9c1c4e900d498a0, type: 2}
   RandomRequest:
-  - Hola quiero que sea galactica
-  - Hola quiero que sea medio rara
+  - "\xA1Quiero que sea Gal\xE1ctica!"
+  - Tiene que ser Medio Rara
+  - La necesito elegante.
+  - Es para mi primera cita
+  - Es para mi hija.
+  - "\xBFPuede tener dinosaurios?"
+  - Que no sea sospechosa.
+  - La quiero con flores.
+  - Ponme lo de siempre.
+  - Muy rara, porfa plis.
 --- !u!114 &2661044959184545340
 MonoBehaviour:
   m_ObjectHideFlags: 0
