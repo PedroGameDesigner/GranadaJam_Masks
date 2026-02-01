@@ -1,0 +1,689 @@
+fileFormatVersion: 2
+guid: e11ae3faa72ab97449bfc4602af4cdbb
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -4892736860913478054
+    second: titulo_letras2_0
+  - first:
+      213: 4717825337413343241
+    second: titulo_letras2_1
+  - first:
+      213: -9174918056162226956
+    second: titulo_letras2_2
+  - first:
+      213: 7657593921131593199
+    second: titulo_letras2_3
+  - first:
+      213: 2802588662757270209
+    second: titulo_letras2_4
+  - first:
+      213: -5702345930537291422
+    second: titulo_letras2_5
+  - first:
+      213: -7161554982273497222
+    second: titulo_letras2_6
+  - first:
+      213: 3094816376238335140
+    second: titulo_letras2_7
+  - first:
+      213: -2043444021768808202
+    second: titulo_letras2_8
+  - first:
+      213: 7253697787750291105
+    second: titulo_letras2_9
+  - first:
+      213: 2251437785869916359
+    second: titulo_letras2_10
+  - first:
+      213: 8327661104401772795
+    second: titulo_letras2_11
+  - first:
+      213: -4028041060761015415
+    second: titulo_letras2_12
+  - first:
+      213: 2887179445837057187
+    second: titulo_letras2_13
+  - first:
+      213: -8217956769211341854
+    second: titulo_letras2_14
+  - first:
+      213: 1343091846116683453
+    second: titulo_letras2_15
+  - first:
+      213: 8743857894425804143
+    second: titulo_letras2_16
+  - first:
+      213: -1803427981177475887
+    second: titulo_letras2_17
+  - first:
+      213: 6115205079936920189
+    second: titulo_letras2_18
+  - first:
+      213: 7901403107970119437
+    second: titulo_letras2_19
+  - first:
+      213: -1545453660311197539
+    second: titulo_letras2_20
+  - first:
+      213: 8263386983774842430
+    second: titulo_letras2_21
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 1
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: titulo_letras2_0
+      rect:
+        serializedVersion: 2
+        x: 121
+        y: 463
+        width: 88
+        height: 132
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a56dac17fb1891cb0800000000000000
+      internalID: -4892736860913478054
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: titulo_letras2_1
+      rect:
+        serializedVersion: 2
+        x: 215
+        y: 470
+        width: 32
+        height: 134
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9081cd4f525197140800000000000000
+      internalID: 4717825337413343241
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: titulo_letras2_2
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 453
+        width: 50
+        height: 137
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4fc022383a42ca080800000000000000
+      internalID: -9174918056162226956
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: titulo_letras2_3
+      rect:
+        serializedVersion: 2
+        x: 451
+        y: 471
+        width: 31
+        height: 134
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fed3d3f791d354a60800000000000000
+      internalID: 7657593921131593199
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: titulo_letras2_4
+      rect:
+        serializedVersion: 2
+        x: 494
+        y: 471
+        width: 31
+        height: 134
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1c22f2f3a8bc4e620800000000000000
+      internalID: 2802588662757270209
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: titulo_letras2_5
+      rect:
+        serializedVersion: 2
+        x: 755
+        y: 462
+        width: 65
+        height: 149
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2613ee7a6923dd0b0800000000000000
+      internalID: -5702345930537291422
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: titulo_letras2_6
+      rect:
+        serializedVersion: 2
+        x: 970
+        y: 475
+        width: 78
+        height: 124
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a77c82aefab0d9c90800000000000000
+      internalID: -7161554982273497222
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: titulo_letras2_7
+      rect:
+        serializedVersion: 2
+        x: 1128
+        y: 459
+        width: 70
+        height: 112
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4a46fbed81ff2fa20800000000000000
+      internalID: 3094816376238335140
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: titulo_letras2_8
+      rect:
+        serializedVersion: 2
+        x: 1270
+        y: 472
+        width: 84
+        height: 123
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6f813142d7a34a3e0800000000000000
+      internalID: -2043444021768808202
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: titulo_letras2_9
+      rect:
+        serializedVersion: 2
+        x: 1576
+        y: 475
+        width: 32
+        height: 135
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1a694eac4bf4aa460800000000000000
+      internalID: 7253697787750291105
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: titulo_letras2_10
+      rect:
+        serializedVersion: 2
+        x: 1616
+        y: 567
+        width: 23
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7c81ba4dcb6be3f10800000000000000
+      internalID: 2251437785869916359
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: titulo_letras2_11
+      rect:
+        serializedVersion: 2
+        x: 1652
+        y: 461
+        width: 71
+        height: 112
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bf074b117abc19370800000000000000
+      internalID: 8327661104401772795
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: titulo_letras2_12
+      rect:
+        serializedVersion: 2
+        x: 374
+        y: 459
+        width: 67
+        height: 103
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 98be6a82ff58918c0800000000000000
+      internalID: -4028041060761015415
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: titulo_letras2_13
+      rect:
+        serializedVersion: 2
+        x: 535
+        y: 463
+        width: 72
+        height: 88
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3ac4de7b862511820800000000000000
+      internalID: 2887179445837057187
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: titulo_letras2_14
+      rect:
+        serializedVersion: 2
+        x: 611
+        y: 454
+        width: 69
+        height: 110
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2e324a7ebd3f3fd80800000000000000
+      internalID: -8217956769211341854
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: titulo_letras2_15
+      rect:
+        serializedVersion: 2
+        x: 829
+        y: 464
+        width: 72
+        height: 89
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dbe22840bee93a210800000000000000
+      internalID: 1343091846116683453
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: titulo_letras2_16
+      rect:
+        serializedVersion: 2
+        x: 1053
+        y: 471
+        width: 69
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f6dbeb39d6c685970800000000000000
+      internalID: 8743857894425804143
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: titulo_letras2_17
+      rect:
+        serializedVersion: 2
+        x: 1358
+        y: 463
+        width: 68
+        height: 103
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1dcaaeb5ecfe8f6e0800000000000000
+      internalID: -1803427981177475887
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: titulo_letras2_18
+      rect:
+        serializedVersion: 2
+        x: 1432
+        y: 434
+        width: 67
+        height: 120
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d7aed46de929dd450800000000000000
+      internalID: 6115205079936920189
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: titulo_letras2_19
+      rect:
+        serializedVersion: 2
+        x: 1502
+        y: 467
+        width: 72
+        height: 88
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d07f9b5634c67ad60800000000000000
+      internalID: 7901403107970119437
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: titulo_letras2_20
+      rect:
+        serializedVersion: 2
+        x: 1619
+        y: 472
+        width: 27
+        height: 88
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d98e25885127d8ae0800000000000000
+      internalID: -1545453660311197539
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: titulo_letras2_21
+      rect:
+        serializedVersion: 2
+        x: 1728
+        y: 474
+        width: 68
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e3e6c713ea27da270800000000000000
+      internalID: 8263386983774842430
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      titulo_letras2_0: -4892736860913478054
+      titulo_letras2_1: 4717825337413343241
+      titulo_letras2_10: 2251437785869916359
+      titulo_letras2_11: 8327661104401772795
+      titulo_letras2_12: -4028041060761015415
+      titulo_letras2_13: 2887179445837057187
+      titulo_letras2_14: -8217956769211341854
+      titulo_letras2_15: 1343091846116683453
+      titulo_letras2_16: 8743857894425804143
+      titulo_letras2_17: -1803427981177475887
+      titulo_letras2_18: 6115205079936920189
+      titulo_letras2_19: 7901403107970119437
+      titulo_letras2_2: -9174918056162226956
+      titulo_letras2_20: -1545453660311197539
+      titulo_letras2_21: 8263386983774842430
+      titulo_letras2_3: 7657593921131593199
+      titulo_letras2_4: 2802588662757270209
+      titulo_letras2_5: -5702345930537291422
+      titulo_letras2_6: -7161554982273497222
+      titulo_letras2_7: 3094816376238335140
+      titulo_letras2_8: -2043444021768808202
+      titulo_letras2_9: 7253697787750291105
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
