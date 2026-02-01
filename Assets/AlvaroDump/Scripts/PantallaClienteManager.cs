@@ -28,7 +28,8 @@ public class PantallaClienteManager : MonoBehaviour
         GameObject comandatemp = Instantiate(comanda, transform);
         var orderDisplay = comandatemp.GetComponent<OrderDisplay>();
 
-        GameObject clientetemp = Instantiate(CurrentClient.clientPrefab, transform);
+        GameObject clientetemp = Instantiate(CurrentClient.clientPrefab);
+        clientetemp.GetComponent<WearMask>().PutOnMask(CurrentClient.clientId);
         orderDisplay.cliente = clientetemp;
         orderDisplay.clientScriptable = CurrentClient;
 
