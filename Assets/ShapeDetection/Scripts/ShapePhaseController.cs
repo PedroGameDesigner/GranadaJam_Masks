@@ -20,11 +20,12 @@ public class ShapePhaseController : MonoBehaviour
     public float ShapeScore { get; internal set; }
     public MaskShapeScriptable selectedMask { get; internal set; }
 
-    public void BeginShape()
+    public void BeginShape(ClientScriptable client)
     {
         selectedMask = maskShapes[Random.Range(0, maskShapes.Length)];
         spline = Instantiate(selectedMask.shapeSplinePrefab, transform);
         input.Reset();
+        input.ClientId = client.clientId;
     }
 
     public void ShapeCompleted()

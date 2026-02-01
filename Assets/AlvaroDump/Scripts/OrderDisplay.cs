@@ -16,6 +16,7 @@ public class OrderDisplay : MonoBehaviour
 
     [SerializeField]
     public GameObject cliente;
+    public ClientScriptable clientScriptable;
 
     OrderGenerator orderGenerator;
     Order order;
@@ -71,7 +72,7 @@ public class OrderDisplay : MonoBehaviour
         cliente.GetComponent<Animator>().SetTrigger("disapear");
 
         yield return new WaitForSeconds(1f);
-        ShapePhaseController.Instance.BeginShape();
+        ShapePhaseController.Instance.BeginShape(clientScriptable);
         FindFirstObjectByType<PlayerInputDetection>().enableInput = true;
 
         ShapePhaseController.Instance.gameObject.GetComponentInChildren<PlayerInputDetection>().enabled = true;

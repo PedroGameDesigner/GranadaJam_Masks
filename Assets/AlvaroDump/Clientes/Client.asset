@@ -1,0 +1,16 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 440cc216a1ee5ce4a8d337f86a76cb94, type: 3}
+  m_Name: Client
+  m_EditorClassIdentifier: Assembly-CSharp::ClientScriptable
+  clientId: 0
+  clientPrefab: {fileID: 5107050548152984185, guid: c20cd83751b00504ab7acf409e146bd0, type: 3}

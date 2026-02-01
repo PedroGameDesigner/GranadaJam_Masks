@@ -7,7 +7,7 @@ public class TextureManager : MonoBehaviour
     public static TextureManager Instance { get; private set; }
 
     [SerializeField] private ColorConfig nullColor;
-    [SerializeField] private List<Texture2D> tempTextures;
+    [SerializeField] private Dictionary<int, Texture2D> tempTextures;
 
     private void Awake()
     {
@@ -16,11 +16,11 @@ public class TextureManager : MonoBehaviour
 
     private void Start()
     {
-        tempTextures = new List<Texture2D>();
+        tempTextures = new Dictionary<int, Texture2D>();
     }
-    public void SaveTexture(Texture2D texture)
+    public void SaveTexture(int id, Texture2D texture)
     {
-        tempTextures.Add(texture);
+        tempTextures.Add(id, texture);
     }
     public Texture2D LoadTexture(int id)
     {
@@ -56,6 +56,6 @@ public class TextureManager : MonoBehaviour
 
     public bool TextureExist(int id)
     {
-        return tempTextures.Count > id;
+        return tempTextures.ContainsKey(id);
     }
 }

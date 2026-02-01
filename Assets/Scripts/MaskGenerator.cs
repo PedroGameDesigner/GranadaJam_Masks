@@ -1,4 +1,3 @@
-using JetBrains.Annotations;
 using System.Collections;
 using UnityEngine;
 
@@ -7,9 +6,9 @@ public class MaskGenerator : MonoBehaviour
     [SerializeField] private EvaluationPanel evPanel;
     [SerializeField] private ShapePhaseController shapeController;
     [SerializeField] private PlayerInputDetection playerDetection;
+    [SerializeField] private DrawManager drawManager;
     [SerializeField] private DrawManager2D drawManager2D;
     [SerializeField] private GameObject Mask;
-
     [SerializeField] private float delayBeforeNewMask;
     private void OnEnable()
     {

@@ -8,7 +8,6 @@ public class DrawManager2D : MonoBehaviour
     [Header("Refs")]
     public Camera cam;
     [SerializeField] private SpriteRenderer spriteRenderer;
-    [SerializeField] int clienID;
 
     [Header("Canvas dimensions")]
     public int totalXPixels = 1024;
@@ -46,6 +45,7 @@ public class DrawManager2D : MonoBehaviour
     private MaterialPropertyBlock mpb;
 
     private bool startDetection = false;
+    private int storageID;
 
     [SerializeField] private PlayerInputDetection playerInput;
     [SerializeField] private GameObject canvasControlls;
@@ -84,7 +84,7 @@ public class DrawManager2D : MonoBehaviour
     //    InitDrawing();
     //}
 
-    private void InitDrawing()
+    private void InitDrawing(int storageID)
     {
         SetCanvasVisible(true);
         InitializeTexture();
@@ -147,9 +147,6 @@ public class DrawManager2D : MonoBehaviour
         spriteRenderer.GetPropertyBlock(mpb);
         mpb.SetTexture("_MainTex", generatedTexture);
         spriteRenderer.SetPropertyBlock(mpb);
-
-
-
     }
 
 
@@ -291,8 +288,8 @@ public class DrawManager2D : MonoBehaviour
 
     public void SaveTexture()
     {
-        var newTexture = RotateTexture(generatedTexture, true);
-        FindFirstObjectByType<TextureManager>().SaveTexture(newTexture);
+       // var newTexture = RotateTexture(generatedTexture, true);
+        FindFirstObjectByType<TextureManager>().SaveTexture(storageID, generatedTexture);
 
 
         //var newTexture = RotateTexture(generatedTexture, true);
@@ -307,7 +304,7 @@ public class DrawManager2D : MonoBehaviour
     {
         SetDetection(false);
         SaveTexture();
-        MaskManager.Instance.SaveMask(clienID, spriteRenderer.transform.parent.gameObject, TextureManager.Instance.LoadTexture(0));
+        MaskManager.Instance.SaveMask(storageID, spriteRenderer.transform.parent.gameObject, TextureManager.Instance.LoadTexture(0));
         SetCanvasVisible(false);
         savedTexture = true;
     }
