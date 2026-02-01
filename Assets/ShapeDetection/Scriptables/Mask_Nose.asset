@@ -13,4 +13,4 @@ MonoBehaviour:
   m_Name: Mask_Nose
   m_EditorClassIdentifier: Assembly-CSharp::MaskShapeScriptable
   shapeSplinePrefab: {fileID: 803498699543149968, guid: 27c169e6c689af841bcf8adf83dafada, type: 3}
-  icon: {fileID: 0}
+  icon: {fileID: -5228020286113774203, guid: b7e0e72d5431d714583f528b9b510733, type: 3}

@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: bf6ef329c20531148ac222d569bee86d, type: 3}
-  m_Name: Mask_Cat
+  m_Name: Mask_Hollow
   m_EditorClassIdentifier: Assembly-CSharp::MaskShapeScriptable
-  shapeSplinePrefab: {fileID: 8893231945192419022, guid: db76863a6ec3b3e4cb5203b8bfc85b9a, type: 3}
-  icon: {fileID: 979976879552909952, guid: d41c13d08ad3aac428924c5784a06bb2, type: 3}
+  shapeSplinePrefab: {fileID: 6321137865320491787, guid: 2d5b5941a7239f94c95e6ed0dc0ed0f6, type: 3}
+  icon: {fileID: 7937150503975231574, guid: 49a7bed06a27292489859d68d2be2ec0, type: 3}

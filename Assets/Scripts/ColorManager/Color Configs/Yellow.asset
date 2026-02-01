@@ -13,4 +13,5 @@ MonoBehaviour:
   m_Name: Yellow
   m_EditorClassIdentifier: Assembly-CSharp::ColorConfig
   colorHex: '#ffe337'
+  colorName: Amarilla
   colorId: 2

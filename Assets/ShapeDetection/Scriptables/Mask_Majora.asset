@@ -13,4 +13,4 @@ MonoBehaviour:
   m_Name: Mask_Majora
   m_EditorClassIdentifier: Assembly-CSharp::MaskShapeScriptable
   shapeSplinePrefab: {fileID: 8939413297023889340, guid: 1ed046af8f2d2b3488b1c0ee03f3c17b, type: 3}
-  icon: {fileID: 0}
+  icon: {fileID: -5228020286113774203, guid: b7e0e72d5431d714583f528b9b510733, type: 3}

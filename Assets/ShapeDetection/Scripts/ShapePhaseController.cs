@@ -10,8 +10,6 @@ public class ShapePhaseController : MonoBehaviour
     [SerializeField] private PlayerInputDetection input;
     [SerializeField] private SpriteShapeController shape;
     [SerializeField] private PolygonCollider2D polygonCollider;
-    [Header("Shapes")]
-    [SerializeField] private MaskShapeScriptable[] maskShapes;
     [Header("Events")]
     [SerializeField] private UnityEvent phaseCompletedEvent;
 
@@ -22,7 +20,7 @@ public class ShapePhaseController : MonoBehaviour
 
     public void BeginShape(ClientScriptable client)
     {
-        selectedMask = maskShapes[Random.Range(0, maskShapes.Length)];
+        selectedMask = PantallaClienteManager.Instance.CurrentComanda.order.maskShape;
         spline = Instantiate(selectedMask.shapeSplinePrefab, transform);
         input.Reset();
         input.ClientId = client.clientId;
