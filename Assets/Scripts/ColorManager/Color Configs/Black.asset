@@ -13,4 +13,5 @@ MonoBehaviour:
   m_Name: Black
   m_EditorClassIdentifier: Assembly-CSharp::ColorConfig
   colorHex: '#000000'
+  colorName: Negro
   colorId: 9

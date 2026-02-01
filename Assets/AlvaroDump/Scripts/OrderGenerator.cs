@@ -7,7 +7,9 @@ using UnityEngine;
 public class OrderGenerator : MonoBehaviour
 {
     [SerializeField]
-    List<Sprite> MaskShapes;
+    List<MaskShapeScriptable> MaskShapes;
+    [SerializeField]
+    List<ColorConfig> colors;
     [SerializeField]
     List<string> RandomRequest;
     public Order GenerateOrder()
@@ -29,12 +31,12 @@ public class OrderGenerator : MonoBehaviour
         System.Random random = new System.Random();
         ColorRequirement colorRequirement = new ColorRequirement();
         Array values = Enum.GetValues(typeof(MaskColor));
-        colorRequirement.maskColor = (MaskColor)values.GetValue(random.Next(values.Length));
+        colorRequirement.maskColor = colors[UnityEngine.Random.Range(0, colors.Count)];
         colorRequirement.percentage = UnityEngine.Random.Range(0, 70);
         return colorRequirement;
     }
 
-    private Sprite RandomMaskShape()
+    private MaskShapeScriptable RandomMaskShape()
     {
         return MaskShapes[UnityEngine.Random.Range(0, MaskShapes.Count)];
     }

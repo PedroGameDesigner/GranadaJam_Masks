@@ -128,14 +128,12 @@ MonoBehaviour:
     m_NumAlphaKeys: 2
   colorCheck: {fileID: 4468098128386192392}
   conditionCheck: {fileID: 9012020961682693148}
-  maxScore: 0.85
-  scoreToFit: 0.55
+  maxScore: 0.75
+  scoreToFit: 0.5
   checkReduction: 0.1
   fadeInTime: 0.5
-  fillTime: 3
-  betweenChecksTime: 0.75
-  expectedColor: {r: 0.2392157, g: 0, b: 0.9607844, a: 1}
-  requiredColor: 0.25
+  fillTime: 2
+  betweenChecksTime: 0.5
   textureManager: {fileID: 0}
   shapePhaseController: {fileID: 0}
 --- !u!225 &7680755665027872179

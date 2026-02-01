@@ -13,4 +13,5 @@ MonoBehaviour:
   m_Name: Blue
   m_EditorClassIdentifier: Assembly-CSharp::ColorConfig
   colorHex: '#61cae7'
+  colorName: Azul
   colorId: 0

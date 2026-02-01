@@ -414,9 +414,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::OrderGenerator
   MaskShapes:
-  - {fileID: 5253822583111438579, guid: 43c616e0bca673d4e813b0dad39639cb, type: 3}
-  - {fileID: -1449681029876875634, guid: a96a48106b2e7f44ab7967120d9c2d90, type: 3}
-  - {fileID: 8320025121885212575, guid: 5b01074f63c5b314bb10d7c4fbf9bac2, type: 3}
+  - {fileID: 11400000, guid: 0882b6048b0f9834891b4d19ab020efc, type: 2}
+  - {fileID: 11400000, guid: 2ead96b2cb064ca4d84087b9967bfa03, type: 2}
+  - {fileID: 11400000, guid: e5b50d7cb691ba74e96c6c46dcfc93e1, type: 2}
+  - {fileID: 11400000, guid: 8791ea6880a864d40b129c6c3000c782, type: 2}
+  colors:
+  - {fileID: 11400000, guid: 4f99a85ae919bca4cadf95671e4e8d38, type: 2}
+  - {fileID: 11400000, guid: 67eed28b7a980a54f94002ad374ba8c7, type: 2}
+  - {fileID: 11400000, guid: e7748a4c88d40824aa4f040a88369d95, type: 2}
+  - {fileID: 11400000, guid: dc96c5c3362f3034da30c88dedb956aa, type: 2}
+  - {fileID: 11400000, guid: b3584a51132baed49b7cbe2a02722bac, type: 2}
+  - {fileID: 11400000, guid: fe1e84849cdd5194287be8517a87c207, type: 2}
+  - {fileID: 11400000, guid: 997293f1c5916d9498fb33184a69ec5c, type: 2}
+  - {fileID: 11400000, guid: 4c5d11dfc5f78834eb1a9a1a1c23e800, type: 2}
+  - {fileID: 11400000, guid: 9da1409c87a38904b9c1c4e900d498a0, type: 2}
   RandomRequest:
   - Hola quiero que sea galactica
   - Hola quiero que sea medio rara

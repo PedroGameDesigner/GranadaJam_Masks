@@ -13,4 +13,5 @@ MonoBehaviour:
   m_Name: Green
   m_EditorClassIdentifier: Assembly-CSharp::ColorConfig
   colorHex: '#82b708'
+  colorName: Verde
   colorId: 1

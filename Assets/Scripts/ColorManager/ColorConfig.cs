@@ -5,6 +5,7 @@ using UnityEngine;
 public class ColorConfig : ScriptableObject
 {
     public string colorHex;
+    public string colorName;
     public MaskColor colorId;
 
     private Color color;
