@@ -7,7 +7,6 @@ public class MaskGenerator : MonoBehaviour
     [SerializeField] private ShapePhaseController shapeController;
     [SerializeField] private PlayerInputDetection playerDetection;
     [SerializeField] private DrawManager drawManager;
-    [SerializeField] private ClientScriptable clientsScriptable;
     [SerializeField] private DrawManager2D drawManager2D;
     [SerializeField] private GameObject Mask;
     [SerializeField] private float delayBeforeNewMask;
@@ -23,8 +22,8 @@ public class MaskGenerator : MonoBehaviour
 
     private void GetNewMask()
     {
-
-        shapeController.BeginShape(clientsScriptable);
+        var client = PantallaClienteManager.Instance.CurrentClient;
+        shapeController.BeginShape(client);
         playerDetection.Reset();
         StartCoroutine(Delay(delayBeforeNewMask));
         
