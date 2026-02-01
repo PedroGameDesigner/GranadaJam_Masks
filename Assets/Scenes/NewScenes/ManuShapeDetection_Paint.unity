@@ -3757,6 +3757,10 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6023826398470614210, guid: 3f3d3aa2650984a43a4d2d96eddd7f93, type: 3}
+      propertyPath: tutorialObject
+      value: 
+      objectReference: {fileID: 2143390439}
+    - target: {fileID: 6023826398470614210, guid: 3f3d3aa2650984a43a4d2d96eddd7f93, type: 3}
       propertyPath: cliente.Array.size
       value: 4
       objectReference: {fileID: 0}
@@ -4500,6 +4504,11 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2136773857}
   m_CullTransparentMesh: 1
+--- !u!1 &2143390439 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5247987116778258151, guid: ac6585cb2f9532749af422377d9b07af, type: 3}
+  m_PrefabInstance: {fileID: 1665125254}
+  m_PrefabAsset: {fileID: 0}
 --- !u!224 &2143390440 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 924912146905792848, guid: ac6585cb2f9532749af422377d9b07af, type: 3}
