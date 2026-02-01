@@ -3718,6 +3718,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0cb60c5db6726754786b3ceaaabc45e6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ShapePhaseController
+--- !u!1 &1159689653 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5247987116778258151, guid: ac6585cb2f9532749af422377d9b07af, type: 3}
+  m_PrefabInstance: {fileID: 1296125678}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1296125678
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4767,7 +4772,7 @@ PrefabInstance:
     - target: {fileID: 6023826398470614210, guid: 3f3d3aa2650984a43a4d2d96eddd7f93, type: 3}
       propertyPath: tutorialObject
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1159689653}
     - target: {fileID: 6023826398470614210, guid: 3f3d3aa2650984a43a4d2d96eddd7f93, type: 3}
       propertyPath: cliente.Array.size
       value: 4
