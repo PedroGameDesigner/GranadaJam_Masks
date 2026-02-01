@@ -19,7 +19,7 @@ public class MusicManager : MonoBehaviour
 
     public void PlayMenuMusic()
     {
-        musicSource.clip = musica[Random.Range(0,1)];
+        musicSource.clip = musica[Random.Range(0,2)];
         musicSource.Play();
     }
 }
