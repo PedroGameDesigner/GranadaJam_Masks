@@ -3662,7 +3662,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1227941496918113641, guid: 3f3d3aa2650984a43a4d2d96eddd7f93, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3206299271657697430, guid: 3f3d3aa2650984a43a4d2d96eddd7f93, type: 3}
       propertyPath: m_Pivot.x
@@ -3780,6 +3780,26 @@ PrefabInstance:
       propertyPath: 'cliente.Array.data[3]'
       value: 
       objectReference: {fileID: 414524373226766036, guid: 6c20d79151d69af4fb20eba076fe02f3, type: 3}
+    - target: {fileID: 6168169409477172423, guid: 3f3d3aa2650984a43a4d2d96eddd7f93, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.73126
+      objectReference: {fileID: 0}
+    - target: {fileID: 6168169409477172423, guid: 3f3d3aa2650984a43a4d2d96eddd7f93, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.73126
+      objectReference: {fileID: 0}
+    - target: {fileID: 6168169409477172423, guid: 3f3d3aa2650984a43a4d2d96eddd7f93, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.73126
+      objectReference: {fileID: 0}
+    - target: {fileID: 6168169409477172423, guid: 3f3d3aa2650984a43a4d2d96eddd7f93, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -695
+      objectReference: {fileID: 0}
+    - target: {fileID: 6168169409477172423, guid: 3f3d3aa2650984a43a4d2d96eddd7f93, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 259
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
