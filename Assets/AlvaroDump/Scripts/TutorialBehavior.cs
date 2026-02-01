@@ -1,8 +1,8 @@
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class TutorialBehavior : MonoBehaviour
 {
-
     public static TutorialBehavior Instance;
     Animator animator;
     bool tutorialTerminado = false;
@@ -33,8 +33,4 @@ public class TutorialBehavior : MonoBehaviour
         }
     }
 
-    public void TutorialActivarClick()
-    {
-        tutorialTerminado = false;
-    }
 }
