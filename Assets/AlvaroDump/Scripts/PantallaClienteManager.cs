@@ -18,6 +18,7 @@ public class PantallaClienteManager : MonoBehaviour
 
     public void LanzarComanda()
     {
+        
         GameObject comandatemp = Instantiate(comanda, transform);
         GameObject clientetemp = Instantiate(cliente[Random.Range(0, cliente.Count)], transform);
         comandatemp.GetComponent<OrderDisplay>().cliente = clientetemp;

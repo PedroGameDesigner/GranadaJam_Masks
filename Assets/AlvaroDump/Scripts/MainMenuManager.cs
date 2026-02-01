@@ -9,7 +9,6 @@ public class MainMenuManager : MonoBehaviour
     [SerializeField] 
     Animator animatorMainMenu;
 
-    public UnityEvent activateFirstStep;
 
     private void Awake()
     {
@@ -20,10 +19,8 @@ public class MainMenuManager : MonoBehaviour
     {
         //AnimacionMainMenu
         animatorMainMenu.SetTrigger("play");
-    }
-
-    public void DescripcionInicial()
-    {
+        TutorialBehavior.Instance.AparicionTutorial();
 
     }
+
 }
