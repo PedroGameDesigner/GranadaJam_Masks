@@ -8,6 +8,7 @@ public class DrawManager2D : MonoBehaviour
     [Header("Refs")]
     public Camera cam;
     [SerializeField] private SpriteRenderer spriteRenderer;
+    [SerializeField] int clienID;
 
     [Header("Canvas dimensions")]
     public int totalXPixels = 1024;
@@ -290,6 +291,7 @@ public class DrawManager2D : MonoBehaviour
     public void FinishDrawing()
     {
         SaveTexture();
+        MaskManager.Instance.SaveMask(clienID, spriteRenderer.transform.parent.gameObject, TextureManager.Instance.LoadTexture(0));
         SetCanvasVisible(false);
     }
 

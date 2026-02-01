@@ -5,6 +5,8 @@ using UnityEngine.Events;
 
 public class ShapePhaseController : MonoBehaviour
 {
+    public static ShapePhaseController Instance;
+
     [SerializeField] private PlayerInputDetection input;
     [SerializeField] private SpriteShapeController shape;
     [SerializeField] private PolygonCollider2D polygonCollider;
@@ -45,5 +47,9 @@ public class ShapePhaseController : MonoBehaviour
         phaseCompletedEvent?.Invoke();
     }
 
-    
+    private void Awake()
+    {
+        Instance = this;
+    }
+
 }
