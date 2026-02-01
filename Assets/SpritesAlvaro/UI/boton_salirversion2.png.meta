@@ -1,10 +1,16 @@
 fileFormatVersion: 2
-guid: ed9b2d086c5c50e4db9efcd412ad325e
+guid: a494826e11a9e754b98dde30f77ec5ba
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -5966939728393013174
-    second: titulo_papelgrande_0
+      213: 7859061992685253434
+    second: boton_salirversion2_0
+  - first:
+      213: 3260103771109695635
+    second: boton_salirversion2_1
+  - first:
+      213: -2136398587709477630
+    second: boton_salirversion2_2
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -96,17 +102,43 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: titulo_papelgrande_0
+      name: boton_salirversion2_0
       rect:
         serializedVersion: 2
-        x: 379
-        y: 258
-        width: 1290
-        height: 822
+        x: 282
+        y: 359
+        width: 1347
+        height: 379
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -115,8 +147,52 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: a48f7f46eeb213da0800000000000000
-      internalID: -5966939728393013174
+      spriteID: a3337c54e3ff01d60800000000000000
+      internalID: 7859061992685253434
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boton_salirversion2_1
+      rect:
+        serializedVersion: 2
+        x: 922
+        y: 324
+        width: 32
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 390a7e76b173e3d20800000000000000
+      internalID: 3260103771109695635
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boton_salirversion2_2
+      rect:
+        serializedVersion: 2
+        x: 953
+        y: 298
+        width: 32
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 20d2ee8bdccf952e0800000000000000
+      internalID: -2136398587709477630
       vertices: []
       indices: 
       edges: []
@@ -135,7 +211,9 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      titulo_papelgrande_0: -5966939728393013174
+      boton_salirversion2_0: 7859061992685253434
+      boton_salirversion2_1: 3260103771109695635
+      boton_salirversion2_2: -2136398587709477630
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

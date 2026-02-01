@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 16fed1fa874d3a04d88a790a29d17fa6
+guid: eaf7ff47ccd85554d90ed59a230200a7
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 5253822583111438579
-    second: Payasa_0
+      213: 5105051437511057696
+    second: Tatako (1)_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -96,17 +96,43 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Payasa_0
+      name: Tatako (1)_0
       rect:
         serializedVersion: 2
-        x: 32
-        y: 92
-        width: 1356
-        height: 1840
+        x: 103
+        y: 0
+        width: 544
+        height: 1047
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -115,8 +141,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 3f0584badc359e840800000000000000
-      internalID: 5253822583111438579
+      spriteID: 021a1f41c39c8d640800000000000000
+      internalID: 5105051437511057696
       vertices: []
       indices: 
       edges: []
@@ -135,7 +161,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Payasa_0: 5253822583111438579
+      Tatako (1)_0: 5105051437511057696
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

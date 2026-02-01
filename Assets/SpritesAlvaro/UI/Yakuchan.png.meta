@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: eb4016883955109488bdf27fad1b1a53
+guid: 5de0ba91d50adce43a5427a7fa1b70a5
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 6874640057820894246
-    second: Tatako_0
+      213: -1839193666699869023
+    second: Yakuchan_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -96,17 +96,43 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Tatako_0
+      name: Yakuchan_0
       rect:
         serializedVersion: 2
-        x: 103
-        y: 0
-        width: 544
-        height: 1047
+        x: 94
+        y: 106
+        width: 1223
+        height: 1734
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -115,8 +141,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 624d51d85b0a76f50800000000000000
-      internalID: 6874640057820894246
+      spriteID: 1a4c437ca1fd976e0800000000000000
+      internalID: -1839193666699869023
       vertices: []
       indices: 
       edges: []
@@ -135,7 +161,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Tatako_0: 6874640057820894246
+      Yakuchan_0: -1839193666699869023
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
