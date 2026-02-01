@@ -454,7 +454,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7f8d54a99218a9a448fb8256c4c32f42, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::TextureManager
-  nullColor: {r: 1, g: 1, b: 1, a: 1}
+  nullColor: {fileID: 0}
   tempTextures: []
 --- !u!1 &387505371
 GameObject:
@@ -822,6 +822,51 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 527113529}
   m_CullTransparentMesh: 1
+--- !u!1 &627095964
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 627095965}
+  - component: {fileID: 627095966}
+  m_Layer: 0
+  m_Name: MaskManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &627095965
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 627095964}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1539776865}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &627095966
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 627095964}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c617f2d757710eb4f91cc7a81d8da655, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::MaskManager
+  maskStoragePosition: {x: -1000, y: -1000, z: 0}
 --- !u!1 &631197685
 GameObject:
   m_ObjectHideFlags: 0
@@ -2165,6 +2210,7 @@ Transform:
   m_Children:
   - {fileID: 2044964996}
   - {fileID: 308664467}
+  - {fileID: 627095965}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1613738421
@@ -3207,6 +3253,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::DrawManager2D
   cam: {fileID: 2008198840}
   spriteRenderer: {fileID: 1115512454}
+  clienID: 0
   totalXPixels: 1024
   totalYPixels: 1024
   brushSize: 4
