@@ -1415,7 +1415,7 @@ AudioSource:
   m_PlayOnAwake: 1
   m_Volume: 0.46
   m_Pitch: 1
-  Loop: 0
+  Loop: 1
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
@@ -3802,6 +3802,10 @@ PrefabInstance:
       propertyPath: delayTime
       value: 0.5
       objectReference: {fileID: 0}
+    - target: {fileID: 1818321088569611123, guid: bf3eaff6a391d2643ae483c25389bd2c, type: 3}
+      propertyPath: cuttingSound
+      value: 
+      objectReference: {fileID: 8300000, guid: 57d09482efa3c2d44aed14cfb7329b27, type: 3}
     - target: {fileID: 5706402161804974860, guid: bf3eaff6a391d2643ae483c25389bd2c, type: 3}
       propertyPath: phaseCompletedEvent.m_PersistentCalls.m_Calls.Array.size
       value: 0
@@ -4204,6 +4208,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::LaunchSound
   paperSound: {fileID: 8300000, guid: b1e2abf67d2772a46bc4de640bc777a4, type: 3}
+  hablarPersonaje: {fileID: 0}
 --- !u!1 &1299240028
 GameObject:
   m_ObjectHideFlags: 0
@@ -4951,7 +4956,7 @@ PrefabInstance:
     - target: {fileID: 6023826398470614210, guid: 3f3d3aa2650984a43a4d2d96eddd7f93, type: 3}
       propertyPath: tutorialObject
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 278270304}
     - target: {fileID: 6023826398470614210, guid: 3f3d3aa2650984a43a4d2d96eddd7f93, type: 3}
       propertyPath: cliente.Array.size
       value: 4

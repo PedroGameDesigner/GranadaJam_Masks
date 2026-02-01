@@ -19,6 +19,9 @@ public class PlayerInputDetection : MonoBehaviour
     [SerializeField] Vector2 screenCoords;
     [SerializeField] Vector3 worldPoint;
 
+    [Header("Sounds")]
+    [SerializeField] AudioClip cuttingSound;
+
     bool pathStarted;
     bool pathCompleted;
     Vector3 lastPoint;
@@ -52,6 +55,7 @@ public class PlayerInputDetection : MonoBehaviour
             {
                 GeneratePoints();
                 pathStarted = true;
+                FXManager.Instance.PlaySound(cuttingSound);
             }
             else if ((worldPoint - lastPoint).magnitude > placementDistance)
             {
