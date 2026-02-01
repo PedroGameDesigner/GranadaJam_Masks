@@ -1,12 +1,11 @@
 using UnityEngine;
-using UnityEngine.InputSystem;
 
 public class TutorialBehavior : MonoBehaviour
 {
 
     public static TutorialBehavior Instance;
     Animator animator;
-    bool tutorialTerminado = true;
+    bool tutorialTerminado = false;
 
     private void Awake()
     {
@@ -18,33 +17,18 @@ public class TutorialBehavior : MonoBehaviour
         animator = GetComponent<Animator>();
     }
 
-
-    private void Update()
-    {
-        if (Mouse.current.leftButton.IsActuated())
-        {
-            TerminarTutorial();
-        }
-    }
-
-
     public void AparicionTutorial()
     {
         animator.SetTrigger("appear");
     }
 
-    public void TutorialPuedeTerminar()
-    {
-        tutorialTerminado = false;
-    }
-
-
     public void TerminarTutorial()
     {
+        Debug.Log("ComandaLanzada");
         if (!tutorialTerminado) 
         {
             Debug.Log("ComandaLanzada");
-            tutorialTerminado = true;
+            tutorialTerminado = false;
             PantallaClienteManager.Instance.LanzarComanda();
         }
     }
