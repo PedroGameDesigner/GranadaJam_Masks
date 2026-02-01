@@ -7,8 +7,6 @@ public class TutorialBehavior : MonoBehaviour
     public static TutorialBehavior Instance;
     Animator animator;
     bool tutorialTerminado = true;
-    
-    
 
     private void Awake()
     {
@@ -20,21 +18,32 @@ public class TutorialBehavior : MonoBehaviour
         animator = GetComponent<Animator>();
     }
 
+
+    private void Update()
+    {
+        if (Mouse.current.leftButton.IsActuated())
+        {
+            TerminarTutorial();
+        }
+    }
+
+
     public void AparicionTutorial()
     {
         animator.SetTrigger("appear");
     }
 
-    private void Update()
+    public void TutorialPuedeTerminar()
     {
-        if(Mouse.current.leftButton.isPressed)
-        TerminarTutorial();
+        tutorialTerminado = false;
     }
+
 
     public void TerminarTutorial()
     {
         if (!tutorialTerminado) 
         {
+            Debug.Log("ComandaLanzada");
             tutorialTerminado = true;
             PantallaClienteManager.Instance.LanzarComanda();
         }
