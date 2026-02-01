@@ -1,6 +1,5 @@
 using System.Collections;
 using TMPro;
-using UnityEditor.PackageManager;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -70,7 +69,13 @@ public class OrderDisplay : MonoBehaviour
         }
         typingCoroutine = null;
         cliente.GetComponent<Animator>().SetTrigger("disapear");
-        
+
+        yield return new WaitForSeconds(1f);
+        ShapePhaseController.Instance.BeginShape();
+
+        ShapePhaseController.Instance.gameObject.GetComponentInChildren<PlayerInputDetection>().enabled = true;
+
+
     }
 
     

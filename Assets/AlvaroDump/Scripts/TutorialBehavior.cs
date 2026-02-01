@@ -1,9 +1,9 @@
-using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
 public class TutorialBehavior : MonoBehaviour
 {
+
     public static TutorialBehavior Instance;
     Animator animator;
     bool tutorialTerminado = true;
@@ -49,4 +49,8 @@ public class TutorialBehavior : MonoBehaviour
         }
     }
 
+    public void TutorialActivarClick()
+    {
+        tutorialTerminado = false;
+    }
 }
