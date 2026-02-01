@@ -12,7 +12,11 @@ public class EvaluationPanel : MonoBehaviour
     [SerializeField] TextMeshProUGUI fillBarText;
     [SerializeField] Gradient fillBarGradient;
     [SerializeField] Image colorCheck;
+    [SerializeField] Image colorCheckError;
+
     [SerializeField] Image conditionCheck;
+    [SerializeField] Image conditionCheckError;
+
 
     [Header("Config")]
     [SerializeField] float maxScore;
@@ -38,6 +42,10 @@ public class EvaluationPanel : MonoBehaviour
         var order = PantallaClienteManager.Instance.CurrentComanda.order;
         conditionCheck.gameObject.SetActive(false);
         colorCheck.gameObject.SetActive(false);
+        conditionCheckError.gameObject.SetActive(false);
+        colorCheckError.gameObject.SetActive(false);
+
+
 
         rawScore = shapePhaseController.ShapeScore;
         convertedScore = rawScore / maxScore;
@@ -95,6 +103,7 @@ public class EvaluationPanel : MonoBehaviour
             }
             convertedScore = scoreEnd;
         }
+        else { colorCheckError.gameObject.SetActive(true); }
         //Check Color
         if (hasFit)
         {
@@ -111,8 +120,10 @@ public class EvaluationPanel : MonoBehaviour
                 yield return null;
             }
             convertedScore = scoreEnd;
-            
+
         }
+        else { conditionCheck.gameObject.SetActive(true); }
+
         OnEvaluationFinished?.Invoke(convertedScore);
     }
 
