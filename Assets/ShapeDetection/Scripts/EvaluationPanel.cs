@@ -40,6 +40,9 @@ public class EvaluationPanel : MonoBehaviour
 
     public void StartEvaluation()
     {
+        conditionCheck.gameObject.SetActive(false);
+        colorCheck.gameObject.SetActive(false);
+
         rawScore = shapePhaseController.ShapeScore;
         convertedScore = rawScore / maxScore;
         hasFit = convertedScore > scoreToFit;
