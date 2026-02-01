@@ -1,10 +1,18 @@
+using System;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class TextureManager : MonoBehaviour
 {
+    public static TextureManager Instance { get; private set; }
+
     [SerializeField] private ColorConfig nullColor;
     [SerializeField] private List<Texture2D> tempTextures;
+
+    private void Awake()
+    {
+        Instance = this;
+    }
 
     private void Start()
     {
@@ -13,6 +21,10 @@ public class TextureManager : MonoBehaviour
     public void SaveTexture(Texture2D texture)
     {
         tempTextures.Add(texture);
+    }
+    public Texture2D LoadTexture(int id)
+    {
+        return tempTextures[id];
     }
 
     public float CheckColor(int textureId, ColorConfig color)
@@ -40,5 +52,10 @@ public class TextureManager : MonoBehaviour
             return correctCount / coloredCount;
         }
         return 0;
+    }
+
+    public bool TextureExist(int id)
+    {
+        return tempTextures.Count > id;
     }
 }
