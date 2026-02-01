@@ -9,7 +9,7 @@ public class PantallaClienteManager : MonoBehaviour
     GameObject comanda;
 
     [SerializeField]
-    List<GameObject> cliente;
+    List<ClientScriptable> clients;
 
     private void Awake()
     {
@@ -18,10 +18,12 @@ public class PantallaClienteManager : MonoBehaviour
 
     public void LanzarComanda()
     {
-        
+        var client = clients[Random.Range(0, clients.Count)];
         GameObject comandatemp = Instantiate(comanda, transform);
-        GameObject clientetemp = Instantiate(cliente[Random.Range(0, cliente.Count)], transform);
-        comandatemp.GetComponent<OrderDisplay>().cliente = clientetemp;
+        var orderDisplay = comandatemp.GetComponent<OrderDisplay>();
+        GameObject clientetemp = Instantiate(client.clientPrefab, transform);
+        orderDisplay.cliente = clientetemp;
+        orderDisplay.clientScriptable = client;
     }
 
 

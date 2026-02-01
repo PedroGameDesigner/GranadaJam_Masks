@@ -6,6 +6,7 @@ public class MaskGenerator : MonoBehaviour
     [SerializeField] private ShapePhaseController shapeController;
     [SerializeField] private PlayerInputDetection playerDetection;
     [SerializeField] private DrawManager drawManager;
+    [SerializeField] private ClientScriptable clientsScriptable;
     private void OnEnable()
     {
         evPanel.OnEvaluationFinished += (f) => GetNewMask();
@@ -19,7 +20,7 @@ public class MaskGenerator : MonoBehaviour
     private void GetNewMask()
     {
 
-        shapeController.BeginShape();
+        shapeController.BeginShape(clientsScriptable);
         playerDetection.Reset();
         
 

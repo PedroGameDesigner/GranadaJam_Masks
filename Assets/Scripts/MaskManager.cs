@@ -43,6 +43,7 @@ public class MaskManager : MonoBehaviour
         {
             var mask = maskDictionary[id];
             maskDictionary.Remove(id);
+            mpbs.Remove(id);
             Destroy(mask);
         }
     }
