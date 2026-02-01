@@ -72,6 +72,7 @@ public class OrderDisplay : MonoBehaviour
 
         yield return new WaitForSeconds(1f);
         ShapePhaseController.Instance.BeginShape();
+        FindFirstObjectByType<PlayerInputDetection>().enableInput = true;
 
         ShapePhaseController.Instance.gameObject.GetComponentInChildren<PlayerInputDetection>().enabled = true;
 

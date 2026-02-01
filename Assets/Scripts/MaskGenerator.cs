@@ -1,3 +1,4 @@
+using JetBrains.Annotations;
 using System.Collections;
 using UnityEngine;
 
@@ -36,8 +37,10 @@ public class MaskGenerator : MonoBehaviour
         evPanel.HidePanel();
         drawManager2D.ResetCanvas();
         drawManager2D.HideSpriteRenderer();
-        shapeController.BeginShape();
+        //shapeController.BeginShape();
         playerDetection.Reset();
+        playerDetection.enableInput = false;
         Mask.transform.position = transform.localPosition +  new Vector3(100,0,0);
+        PantallaClienteManager.Instance.LanzarComanda();
     }
 }
