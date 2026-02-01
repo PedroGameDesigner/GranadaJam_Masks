@@ -134,9 +134,6 @@ MonoBehaviour:
   fadeInTime: 0.5
   fillTime: 3
   betweenChecksTime: 0.75
-  expectedColor: {r: 0.2392157, g: 0, b: 0.9607844, a: 1}
-  requiredColor: 0.25
-  textureManager: {fileID: 0}
   shapePhaseController: {fileID: 0}
 --- !u!225 &7680755665027872179
 CanvasGroup:

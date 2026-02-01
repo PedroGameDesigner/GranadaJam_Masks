@@ -227,10 +227,5 @@ public class DrawManager : MonoBehaviour
         //File.WriteAllBytes(path, bytes);
     }
 
-    public void SetDetection(bool value)
-    {
-        startDetection = value;
-    }
-
 
 }
