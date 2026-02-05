@@ -20,7 +20,8 @@ public class PlayerInputDetection : MonoBehaviour
     [SerializeField] Vector3 worldPoint;
 
     [Header("Sounds")]
-    [SerializeField] AudioClip cuttingSound;
+    [SerializeField] AudioClip cuttingSound; 
+    [SerializeField] AudioClip cutCompleted;
 
     bool pathStarted;
     bool pathCompleted;
@@ -69,6 +70,7 @@ public class PlayerInputDetection : MonoBehaviour
             pathCompleted = true;
             CheckPath();
             OnMaskCreated?.Invoke(ClientId);
+            FXManager.Instance.PlaySound(cutCompleted);
         }
     }
 

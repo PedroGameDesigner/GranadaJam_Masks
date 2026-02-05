@@ -30,6 +30,9 @@ public class EvaluationPanel : MonoBehaviour
     [SerializeField] TextureManager textureManager;
     [SerializeField] ShapePhaseController shapePhaseController;
 
+    [Header("Audio")]
+    [SerializeField] AudioClip evaluationCompleted;
+
     float rawScore;
     float convertedScore;
     bool hasColor;
@@ -63,6 +66,8 @@ public class EvaluationPanel : MonoBehaviour
     public IEnumerator EvaluationAnimation()
     {
         UpdateFillBar(0);
+
+        GetComponent<Animator>().SetTrigger("display");
 
         //Fade In
         float time = 0;
@@ -121,9 +126,11 @@ public class EvaluationPanel : MonoBehaviour
                 yield return null;
             }
             convertedScore = scoreEnd;
-
+            FXManager.Instance.PlaySound(evaluationCompleted);
         }
         else { conditionCheck.gameObject.SetActive(true); }
+
+        
 
         OnEvaluationFinished?.Invoke(convertedScore);
     }
@@ -140,6 +147,6 @@ public class EvaluationPanel : MonoBehaviour
 
     public void HidePanel()
     {
-        canvasGroup.alpha = 0f;
+        GetComponent<Animator>().SetTrigger("hide");
     }
 }

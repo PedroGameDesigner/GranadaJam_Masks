@@ -1,16 +1,10 @@
 fileFormatVersion: 2
-guid: 5a2d6b054021c0e48978e19ca990ddd3
+guid: ee33d0a7546c9a44c9acb955ecc1f53e
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 7449175606500603405
-    second: boton_hoverversion2_0
-  - first:
-      213: -8879523011989824234
-    second: boton_hoverversion2_1
-  - first:
-      213: 7826520602244987042
-    second: boton_hoverversion2_2
+      213: -297834712347914095
+    second: pngtree-3d-silver-music-note-icon-render-isloated-on-transparent-background-png-image_12478975_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -116,19 +110,6 @@ TextureImporter:
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 4
-    buildTarget: WebGL
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    ignorePlatformSupport: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 4
     buildTarget: iOS
     maxTextureSize: 2048
     resizeAlgorithm: 0
@@ -145,13 +126,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: boton_hoverversion2_0
+      name: pngtree-3d-silver-music-note-icon-render-isloated-on-transparent-background-png-image_12478975_0
       rect:
         serializedVersion: 2
-        x: 282
-        y: 359
-        width: 1347
-        height: 379
+        x: 104
+        y: 83
+        width: 143
+        height: 178
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -160,52 +141,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: d0639f62fb9c06760800000000000000
-      internalID: 7449175606500603405
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: boton_hoverversion2_1
-      rect:
-        serializedVersion: 2
-        x: 922
-        y: 324
-        width: 32
-        height: 18
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 61d9077cdd895c480800000000000000
-      internalID: -8879523011989824234
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: boton_hoverversion2_2
-      rect:
-        serializedVersion: 2
-        x: 953
-        y: 298
-        width: 32
-        height: 19
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 2a8b61465036d9c60800000000000000
-      internalID: 7826520602244987042
+      spriteID: 190d8b838e0eddbf0800000000000000
+      internalID: -297834712347914095
       vertices: []
       indices: 
       edges: []
@@ -214,7 +151,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 5e97eb03825dee720800000000000000
+    spriteID: 
     internalID: 0
     vertices: []
     indices: 
@@ -224,9 +161,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      boton_hoverversion2_0: 7449175606500603405
-      boton_hoverversion2_1: -8879523011989824234
-      boton_hoverversion2_2: 7826520602244987042
+      pngtree-3d-silver-music-note-icon-render-isloated-on-transparent-background-png-image_12478975_0: -297834712347914095
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

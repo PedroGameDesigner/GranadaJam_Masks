@@ -3,7 +3,7 @@ using UnityEngine.InputSystem;
 
 public class TutorialBehavior : MonoBehaviour
 {
-
+    [SerializeField] AudioClip clickSound;
     public static TutorialBehavior Instance;
     Animator animator;
     bool tutorialTerminado = true;
@@ -23,6 +23,7 @@ public class TutorialBehavior : MonoBehaviour
     {
         if (Mouse.current.leftButton.IsActuated())
         {
+
             TerminarTutorial();
         }
     }
@@ -43,8 +44,10 @@ public class TutorialBehavior : MonoBehaviour
     {
         if (!tutorialTerminado) 
         {
+            FXManager.Instance.PlaySound(clickSound);
             Debug.Log("ComandaLanzada");
             tutorialTerminado = true;
+            animator.SetTrigger("disapear");
             PantallaClienteManager.Instance.LanzarComanda();
         }
     }
