@@ -20,4 +20,20 @@ public class FXManager : MonoBehaviour
             m_AudioSource.PlayOneShot(audio);
         }
     }
+
+    public void PlaySound(AudioClip audio, float volume)
+    {
+        if (m_AudioSource != null)
+        {
+            m_AudioSource.PlayOneShot(audio, volume);
+        }
+    }
+
+    public void PlayRandomSound(AudioClip[] audio)
+    {
+        if (m_AudioSource != null)
+        {
+            m_AudioSource.PlayOneShot(audio[Random.Range(0, audio.Length)]);
+        }
+    }
 }
