@@ -1,4 +1,3 @@
-using System;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -20,10 +19,13 @@ public class TextureManager : MonoBehaviour
     }
     public void SaveTexture(int id, Texture2D texture)
     {
-        if (!tempTextures.ContainsKey(id)) 
-            tempTextures.Add(id, texture);
+        var copy = new Texture2D(texture.width, texture.height, texture.format, texture.mipmapCount, true);
+        Graphics.CopyTexture(texture, copy);
+
+        if (!tempTextures.ContainsKey(id))        
+            tempTextures.Add(id, copy);        
         else
-            tempTextures[id] = texture;
+            tempTextures[id] = copy;
     }
     public Texture2D LoadTexture(int id)
     {
@@ -48,7 +50,7 @@ public class TextureManager : MonoBehaviour
             }
 
 
-        Debug.Log($"{correctCount}/{coloredCount} ({correctCount * 100 / coloredCount}%, full={totalSize})");
+        Debug.Log($"Check Color: {correctCount}/{coloredCount} ({correctCount * 100 / coloredCount}%, full={totalSize})");
 
         if (coloredCount/ totalSize > 0.1f)
         {

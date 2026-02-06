@@ -129,7 +129,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9733a783962936d44a840afa9c4d0d07, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::WearMask
-  maskSize: {x: 0.3, y: 0.3}
+  maskSize: {x: 0.65, y: 0.65, z: 0.65}
   facePosition: {x: -0.59, y: 1.48, z: -0.1}
 --- !u!114 &848258758482495120
 MonoBehaviour:
