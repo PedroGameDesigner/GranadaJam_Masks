@@ -25,6 +25,9 @@ public class OrderDisplay : MonoBehaviour
     [SerializeField]
     float timeBetweenCharacters;
 
+    [SerializeField]
+    AudioClip[] typeSound;
+
     Coroutine typingCoroutine;
 
     private void Awake()

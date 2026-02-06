@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 5920949637227802204}
   - component: {fileID: 3800938619754576832}
   - component: {fileID: 95762082679602617}
+  - component: {fileID: -2423999226642484550}
   m_Layer: 0
   m_Name: Yakuza
   m_TagString: Untagged
@@ -130,6 +131,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::WearMask
   maskSize: {x: 0.25, y: 0.25}
   facePosition: {x: -0.41, y: 2.06, z: -0.1}
+--- !u!114 &-2423999226642484550
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 414524373226766036}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 148088022c2de6142b0e7dd366cc706a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::LaunchSound
+  paperSound: {fileID: 8300000, guid: b1e2abf67d2772a46bc4de640bc777a4, type: 3}
+  hablarPersonaje: {fileID: 8300000, guid: bd86851b54b212744a7a2ae75d022e22, type: 3}
 --- !u!1 &6532664817818150669
 GameObject:
   m_ObjectHideFlags: 0

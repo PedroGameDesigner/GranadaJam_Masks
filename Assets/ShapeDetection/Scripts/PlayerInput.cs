@@ -19,6 +19,10 @@ public class PlayerInputDetection : MonoBehaviour
     [SerializeField] Vector2 screenCoords;
     [SerializeField] Vector3 worldPoint;
 
+    [Header("Sounds")]
+    [SerializeField] AudioClip cuttingSound; 
+    [SerializeField] AudioClip cutCompleted;
+
     bool pathStarted;
     bool pathCompleted;
     Vector3 lastPoint;
@@ -52,6 +56,7 @@ public class PlayerInputDetection : MonoBehaviour
             {
                 GeneratePoints();
                 pathStarted = true;
+                FXManager.Instance.PlaySound(cuttingSound);
             }
             else if ((worldPoint - lastPoint).magnitude > placementDistance)
             {
@@ -65,6 +70,7 @@ public class PlayerInputDetection : MonoBehaviour
             pathCompleted = true;
             CheckPath();
             OnMaskCreated?.Invoke(ClientId);
+            FXManager.Instance.PlaySound(cutCompleted);
         }
     }
 

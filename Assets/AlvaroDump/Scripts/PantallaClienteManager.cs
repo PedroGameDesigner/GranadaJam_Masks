@@ -37,7 +37,12 @@ public class PantallaClienteManager : MonoBehaviour
         if (!justFirstTime)
         {
             justFirstTime = true;
-            tutorialObject.SetActive(false);
+            //tutorialObject.SetActive(false);
         }
+    }
+
+    public void HideComanda()
+    {
+        CurrentComanda.gameObject.GetComponent<Animator>().SetTrigger("hide");
     }
 }

@@ -12,7 +12,11 @@ public class EvaluationPanel : MonoBehaviour
     [SerializeField] TextMeshProUGUI fillBarText;
     [SerializeField] Gradient fillBarGradient;
     [SerializeField] Image colorCheck;
+    [SerializeField] Image colorCheckError;
+
     [SerializeField] Image conditionCheck;
+    [SerializeField] Image conditionCheckError;
+
 
     [Header("Config")]
     [SerializeField] float maxScore;
@@ -25,6 +29,9 @@ public class EvaluationPanel : MonoBehaviour
     [Header("References")]
     [SerializeField] TextureManager textureManager;
     [SerializeField] ShapePhaseController shapePhaseController;
+
+    [Header("Audio")]
+    [SerializeField] AudioClip evaluationCompleted;
 
     float rawScore;
     float convertedScore;
@@ -39,6 +46,10 @@ public class EvaluationPanel : MonoBehaviour
         var client = PantallaClienteManager.Instance.CurrentClient.clientId;
         conditionCheck.gameObject.SetActive(false);
         colorCheck.gameObject.SetActive(false);
+        conditionCheckError.gameObject.SetActive(false);
+        colorCheckError.gameObject.SetActive(false);
+
+
 
         rawScore = shapePhaseController.ShapeScore;
         convertedScore = rawScore / maxScore;
@@ -55,6 +66,8 @@ public class EvaluationPanel : MonoBehaviour
     public IEnumerator EvaluationAnimation()
     {
         UpdateFillBar(0);
+
+        GetComponent<Animator>().SetTrigger("display");
 
         //Fade In
         float time = 0;
@@ -96,6 +109,7 @@ public class EvaluationPanel : MonoBehaviour
             }
             convertedScore = scoreEnd;
         }
+        else { colorCheckError.gameObject.SetActive(true); }
         //Check Color
         if (hasFit)
         {
@@ -112,8 +126,12 @@ public class EvaluationPanel : MonoBehaviour
                 yield return null;
             }
             convertedScore = scoreEnd;
-            
+            FXManager.Instance.PlaySound(evaluationCompleted);
         }
+        else { conditionCheck.gameObject.SetActive(true); }
+
+        
+
         OnEvaluationFinished?.Invoke(convertedScore);
     }
 
@@ -129,6 +147,6 @@ public class EvaluationPanel : MonoBehaviour
 
     public void HidePanel()
     {
-        canvasGroup.alpha = 0f;
+        GetComponent<Animator>().SetTrigger("hide");
     }
 }
