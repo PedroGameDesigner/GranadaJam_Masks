@@ -56,7 +56,11 @@ public class EvaluationPanel : MonoBehaviour
         hasFit = convertedScore > scoreToFit;
         if (hasFit)
             convertedScore -= checkReduction;
-        hasColor = textureManager.CheckColor(client, order.colorRequirement.maskColor) > order.colorRequirement.percentage;
+
+        var colorPercent = textureManager.CheckColor(client, order.colorRequirement.maskColor);
+        var requiredPercent = order.colorRequirement.percentage * 0.01f;
+        hasColor = colorPercent > requiredPercent;
+        Debug.Log($"Check Color: {colorPercent} > {requiredPercent} = {hasColor}");
         if (hasColor)
             convertedScore -= checkReduction;
 
