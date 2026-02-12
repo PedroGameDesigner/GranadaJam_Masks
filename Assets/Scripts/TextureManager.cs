@@ -51,8 +51,7 @@ public class TextureManager : MonoBehaviour
 
 
         Debug.Log($"Check Color: {correctCount}/{coloredCount} ({correctCount * 100 / coloredCount}%, full={totalSize})");
-
-        if (coloredCount/ totalSize > 0.1f)
+        if (coloredCount / totalSize > 0.1f)
         {
             return correctCount / coloredCount;
         }

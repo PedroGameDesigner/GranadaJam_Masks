@@ -17,7 +17,7 @@ public class WearMask : MonoBehaviour
 
     private void OnDrawGizmosSelected()
     {
-        Gizmos.color = Color.pink;
-        Gizmos.DrawWireSphere(transform.position + facePosition, 1f);
+        Gizmos.color = Color.red;
+        Gizmos.DrawWireSphere((Vector3)(transform.rotation * facePosition * transform.localScale.x) + transform.position, 1f);
     }
 }
